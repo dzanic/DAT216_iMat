@@ -200,6 +200,7 @@ public class ItemPanel extends javax.swing.JPanel {
         });
 
         infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/info.gif"))); // NOI18N
+        infoButton.setBorder(null);
         infoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 infoButtonActionPerformed(evt);

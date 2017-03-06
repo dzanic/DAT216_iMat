@@ -90,7 +90,6 @@ public class ImatView extends javax.swing.JFrame {
         oProductPanel = new javax.swing.JPanel();
         profilePanel = new javax.swing.JPanel();
         profileNavPanel = new javax.swing.JPanel();
-        profileLabel = new javax.swing.JLabel();
         myInfoButton = new javax.swing.JButton();
         prevOrderButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -680,11 +679,10 @@ public class ImatView extends javax.swing.JFrame {
 
         profilePanel.setBackground(new java.awt.Color(51, 51, 51));
 
-        profileNavPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        profileNavPanel.setBackground(new java.awt.Color(51, 51, 51));
 
-        profileLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        profileLabel.setText("Profil");
-
+        myInfoButton.setBackground(new java.awt.Color(0, 153, 0));
+        myInfoButton.setForeground(new java.awt.Color(255, 255, 255));
         myInfoButton.setText("Mina uppgifter");
         myInfoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -692,6 +690,8 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        prevOrderButton.setBackground(new java.awt.Color(0, 153, 0));
+        prevOrderButton.setForeground(new java.awt.Color(255, 255, 255));
         prevOrderButton.setText("Tidigare köp");
         prevOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -705,50 +705,68 @@ public class ImatView extends javax.swing.JFrame {
             profileNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(profileNavPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(profileNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(profileLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(profileNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(myInfoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(prevOrderButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(prevOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         profileNavPanelLayout.setVerticalGroup(
             profileNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(profileNavPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(profileLabel)
+                .addComponent(myInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(myInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(prevOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(prevOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jScrollPane2.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane2.setBorder(null);
+
+        profileScPanel.setBackground(new java.awt.Color(51, 51, 51));
+        profileScPanel.setMaximumSize(new java.awt.Dimension(1000, 500));
+        profileScPanel.setPreferredSize(new java.awt.Dimension(1000, 500));
         profileScPanel.setLayout(new java.awt.CardLayout());
 
+        myInfoPanel.setBackground(new java.awt.Color(51, 51, 51));
+        myInfoPanel.setMaximumSize(new java.awt.Dimension(32767, 500));
+        myInfoPanel.setPreferredSize(new java.awt.Dimension(1631, 500));
+
+        infoNameLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoNameLabel.setText("Namn:");
 
+        infoMailLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoMailLabel.setText("E-post:");
 
+        infoPhoneLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoPhoneLabel.setText("Telefonnummer:");
 
+        infoAdrLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoAdrLabel.setText("Adress:");
 
+        infoZipLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoZipLabel.setText("Postnummer:");
 
+        infoCityLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoCityLabel.setText("Ort:");
 
+        infoCrdTypeL.setForeground(new java.awt.Color(255, 255, 255));
         infoCrdTypeL.setText("Kontokort:");
 
+        infoCardNumL.setForeground(new java.awt.Color(255, 255, 255));
         infoCardNumL.setText("Kortnummer:");
 
+        infoCardOwnL.setForeground(new java.awt.Color(255, 255, 255));
         infoCardOwnL.setText("Kortinnehavare:");
 
+        infoCardValidL.setForeground(new java.awt.Color(255, 255, 255));
         infoCardValidL.setText("Giltigt t.o.m.:");
 
         infoCardCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Välj korttyp", "VISA", "MasterCard" }));
 
         infoMonthCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MM", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
 
+        infoSlashLabel.setForeground(new java.awt.Color(255, 255, 255));
         infoSlashLabel.setText("/");
 
         infoYearCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ÅÅ", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" }));
@@ -767,7 +785,7 @@ public class ImatView extends javax.swing.JFrame {
         myInfoPanelLayout.setHorizontalGroup(
             myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(myInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(75, 75, 75)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(infoContShopBut)
                     .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -782,29 +800,32 @@ public class ImatView extends javax.swing.JFrame {
                         .addComponent(infoCardNumL, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(infoCardValidL, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(infoSaveBut)
-                    .addGroup(myInfoPanelLayout.createSequentialGroup()
-                        .addComponent(infoMonthCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(infoSlashLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(infoYearCombo, 0, 55, Short.MAX_VALUE))
-                    .addComponent(infoZipField, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(infoCrdOwnField)
                     .addComponent(infoCrdNumField)
-                    .addComponent(infoCardCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(infoCityField)
                     .addComponent(infoAdrField)
-                    .addComponent(infoPhoneField)
                     .addComponent(infoMailField)
-                    .addComponent(infoNameField))
-                .addContainerGap(1400, Short.MAX_VALUE))
+                    .addComponent(infoPhoneField)
+                    .addGroup(myInfoPanelLayout.createSequentialGroup()
+                        .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(myInfoPanelLayout.createSequentialGroup()
+                                .addComponent(infoMonthCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoSlashLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoYearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(infoSaveBut)
+                            .addComponent(infoNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(infoCardCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(infoZipField, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(1222, 1222, 1222))
         );
         myInfoPanelLayout.setVerticalGroup(
             myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(myInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoNameLabel)
                     .addComponent(infoNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -850,7 +871,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoContShopBut)
                     .addComponent(infoSaveBut))
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
 
         profileScPanel.add(myInfoPanel, "card2");
@@ -905,7 +926,7 @@ public class ImatView extends javax.swing.JFrame {
                             .addComponent(nrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(69, 69, 69)
                             .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(727, Short.MAX_VALUE))
+                .addContainerGap(688, Short.MAX_VALUE))
         );
         prevOrderViewPanelLayout.setVerticalGroup(
             prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -920,7 +941,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totalPriceLabel))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         profileScPanel.add(prevOrderViewPanel, "card4");
@@ -932,20 +953,14 @@ public class ImatView extends javax.swing.JFrame {
         profilePanelLayout.setHorizontalGroup(
             profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(profilePanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(profileNavPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1564, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1592, Short.MAX_VALUE))
         );
         profilePanelLayout.setVerticalGroup(
             profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(profilePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(profileNavPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
+            .addComponent(profileNavPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         mainPanel.add(profilePanel, "card4");
@@ -1000,7 +1015,7 @@ public class ImatView extends javax.swing.JFrame {
 
         basketPanel.setBackground(new java.awt.Color(51, 51, 51));
 
-        basketPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        basketPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         basketTopPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1128,7 +1143,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(basketPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(basketTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(basketBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1675, Short.MAX_VALUE))
+                    .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1679, Short.MAX_VALUE))
                 .addContainerGap())
         );
         basketPanel2Layout.setVerticalGroup(
@@ -1137,7 +1152,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(basketTopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
+                .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(basketBottomPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -2260,10 +2275,6 @@ public class ImatView extends javax.swing.JFrame {
         mController.populateView(ProductCategory.HERB);
     }//GEN-LAST:event_catBtnTwentyOneActionPerformed
 
-    private void infoSaveButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoSaveButActionPerformed
-        mController.saveProfile();
-    }//GEN-LAST:event_infoSaveButActionPerformed
-
     private void seq2backButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seq2backButActionPerformed
          mController.setContentPanel(checkOutPanel);
         mController.setCardView(checkOutPanel);
@@ -2304,6 +2315,10 @@ public class ImatView extends javax.swing.JFrame {
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.MEAT);
     }//GEN-LAST:event_catBtnElevenActionPerformed
+
+    private void infoSaveButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoSaveButActionPerformed
+        mController.saveProfile();
+    }//GEN-LAST:event_infoSaveButActionPerformed
 
     //Helper method, cuts the amount of code in the
     //category buttons with around 2/3's
@@ -2483,7 +2498,6 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JPanel prevOrderViewPanel;
     private javax.swing.JPanel productPanel;
     private javax.swing.JButton profileButton;
-    private javax.swing.JLabel profileLabel;
     private javax.swing.JPanel profileNavPanel;
     private javax.swing.JPanel profilePanel;
     private javax.swing.JPanel profileScPanel;
