@@ -18,9 +18,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="subButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="quantityField" pref="22" max="32767" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="quantityField" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="addiButton" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -46,7 +46,8 @@
     </Component>
     <Component class="javax.swing.JTextField" name="quantityField">
       <Properties>
-        <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="888"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="subButton">

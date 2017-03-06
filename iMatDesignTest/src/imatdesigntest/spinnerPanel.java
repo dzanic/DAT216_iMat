@@ -36,7 +36,8 @@ public class spinnerPanel extends javax.swing.JPanel{
             }
         });
 
-        quantityField.setText("0");
+        quantityField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quantityField.setText("888");
 
         subButton.setText("-");
         subButton.addActionListener(new java.awt.event.ActionListener() {
@@ -51,9 +52,9 @@ public class spinnerPanel extends javax.swing.JPanel{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(subButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(quantityField, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quantityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addiButton))
         );
         layout.setVerticalGroup(

@@ -653,7 +653,10 @@ public class ImatView extends javax.swing.JFrame {
 
         productPanel.setBackground(new java.awt.Color(51, 51, 51));
 
-        oProductPanel.setLayout(new java.awt.GridLayout(0, 4, 5, 5));
+        jScrollPane1.setBorder(null);
+
+        oProductPanel.setBackground(new java.awt.Color(51, 51, 51));
+        oProductPanel.setLayout(new java.awt.GridLayout(0, 5, 10, 10));
         jScrollPane1.setViewportView(oProductPanel);
 
         javax.swing.GroupLayout productPanelLayout = new javax.swing.GroupLayout(productPanel);
