@@ -33,6 +33,7 @@ public class ItemPanel extends javax.swing.JPanel {
         this.productPriceLabel.setText(Double.toString(product.getPrice()));
        
         this.productImageLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(product, 235,115));
+        this.spinnerPanel1.setQuantity(1); //[HOTFIX TAG] 
         checkIfFavorite();
     }
     public ItemPanel(Product product, boolean fav){
