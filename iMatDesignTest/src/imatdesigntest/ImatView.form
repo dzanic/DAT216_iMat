@@ -3245,9 +3245,6 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="totalPriceLabel1">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="???,?? "/>
-                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="basketTotPriceLab" sourcePath="${text}" target="totalPriceLabel1" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>

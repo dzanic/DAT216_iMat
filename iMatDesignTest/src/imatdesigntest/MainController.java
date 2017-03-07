@@ -46,6 +46,7 @@ public class MainController implements CardViewController, ItemPanelController,
                             JDialog receiptDialog,
                             JDialog profileSavedDialog,
                             JLabel basketTotalPrice){
+                     
     this.infoName         = infoName;
     this.infoMail         = infoMail;
     this.infoPhone        = infoPhone ;
@@ -145,6 +146,7 @@ public class MainController implements CardViewController, ItemPanelController,
         this.infoCardOwn.setText(IMatDataHandler.getInstance().getCreditCard().getHoldersName());
         this.infoMonth.setSelectedIndex(0);
         this.infoYear.setSelectedIndex(0);
+        this.infoCity.setText(IMatDataHandler.getInstance().getCustomer().getPostAddress());
     }
     public void populateFinalBasketView(){   
         this.contentPanel.removeAll();
@@ -179,14 +181,16 @@ public class MainController implements CardViewController, ItemPanelController,
         IMatDataHandler.getInstance().getCustomer().setFirstName(this.infoName.getText()); //saves the entire name to first name
         IMatDataHandler.getInstance().getCustomer().setEmail(this.infoMail.getText());
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber(this.infoPhone.getText());
-        IMatDataHandler.getInstance().getCustomer().setPostAddress(this.infoAdr.getText());
+        IMatDataHandler.getInstance().getCustomer().setPostAddress(this.infoCity.getText());
         IMatDataHandler.getInstance().getCustomer().setPostCode(this.infoZip.getText());
+        IMatDataHandler.getInstance().getCustomer().setAddress(this.infoAdr.getText());
         
     }
     public void saveCard(){
         IMatDataHandler.getInstance().getCreditCard().setCardType(objToString(this.infoCardCombo.getSelectedItem()));
         IMatDataHandler.getInstance().getCreditCard().setCardNumber(this.infoCardNum.getText());
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(this.infoCardOwn.getText());
+        System.out.println("this is :" + this.infoCardOwn.getText());
         IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.parseInt(objToString(this.infoMonth.getSelectedItem())));
         IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.parseInt(objToString(this.infoYear.getSelectedItem())));
     }

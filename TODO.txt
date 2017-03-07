@@ -10,7 +10,7 @@ Förtext i sök?
 Modifiera kategorier.
 Stjärna på favoriter-knappen
 Alignments överlag
-Lys upp vald kategori
+Lys upp vald kategori				->Grundlogik implementerad, funkar att lysa upp en knapp.
 
 fortsätta med designen...
 ---------------
@@ -34,6 +34,6 @@ varor på en rad, fel i grid, dras ut.
 klicka enter vid sök, går ej.			 -> Fixat
 
 'fortsätt handla' i uppgifter, funkar ej.	 -> Fixat
-'spara' i uppgifter, ingen notis.
+'spara' i uppgifter, ingen notis.		 -> Fixat, behövs ett hårdkodat värde för location atm.
 
 

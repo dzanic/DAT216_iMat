@@ -33,7 +33,7 @@ public class ImatView extends javax.swing.JFrame {
                             infoCityField,
                             infoCardCombo,
                             infoCrdNumField,
-                            infoCrdNumField,
+                            infoCrdOwnField,
                             infoMonthCombo,
                             infoYearCombo,
                             saveAdrChkBox,
