@@ -8,15 +8,18 @@ package imatdesigntest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 import se.chalmers.ait.dat215.project.*;
 
 /**
@@ -41,6 +44,7 @@ public class MainController implements CardViewController, ItemPanelController,
                             JCheckBox saveAdr,
                             JCheckBox saveCrd,
                             JDialog receiptDialog,
+                            JDialog profileSavedDialog,
                             JLabel basketTotalPrice){
     this.infoName         = infoName;
     this.infoMail         = infoMail;
@@ -56,6 +60,7 @@ public class MainController implements CardViewController, ItemPanelController,
     this.saveAdr          = saveAdr;
     this.saveCrd          = saveCrd;
     this.receiptDialog    = receiptDialog;
+    this.profileSavedDialog = profileSavedDialog;
     this.basketTotalPrice = basketTotalPrice;
     }
     
@@ -66,6 +71,9 @@ public class MainController implements CardViewController, ItemPanelController,
         for(Product product : currentProductList){
            this.newItem(product);
         }
+        this.contentPanel.revalidate();
+        this.contentPanel.repaint();
+        
         
     }
     public void populateViewFavorites(){
@@ -75,6 +83,7 @@ public class MainController implements CardViewController, ItemPanelController,
         for(Product product : currentProductList){
            this.newItemFav(product);
         }
+        this.contentPanel.revalidate();
         this.contentPanel.repaint();
     }
     public void populateViewDiscounted(){
@@ -83,7 +92,9 @@ public class MainController implements CardViewController, ItemPanelController,
         
         for(Product product : currentProductList){
            this.newItem(product);
-        }      
+        }
+        this.contentPanel.revalidate();
+        this.contentPanel.repaint();
     }
     public void populateViewSearch(String searchObj){
         this.contentPanel.removeAll();
@@ -92,6 +103,8 @@ public class MainController implements CardViewController, ItemPanelController,
         for(Product product : currentProductList){
            this.newItem(product);
         }
+        this.contentPanel.revalidate();
+        this.contentPanel.repaint();
     }
     public void populateBasketView(){
         double temp = 0;
@@ -103,6 +116,9 @@ public class MainController implements CardViewController, ItemPanelController,
             temp += shoppingItem.getTotal();
         }
         this.basketTotalPrice.setText(String.valueOf(temp));
+        
+        this.contentPanel.revalidate();
+        this.contentPanel.repaint();
     }
     public void populateHistory(){
         this.contentPanel.removeAll();
@@ -112,7 +128,8 @@ public class MainController implements CardViewController, ItemPanelController,
             this.newHistoryPanel(order);
         }
         
-        
+        this.contentPanel.revalidate();
+        this.contentPanel.repaint();
        
     }
     public void populateProfile(){
@@ -142,6 +159,20 @@ public class MainController implements CardViewController, ItemPanelController,
     public void saveProfile(){     
         this.saveAdress();
         this.saveCard();
+        
+        Timer timer = new Timer(2000, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               profileSavedDialog.setVisible(false);
+               profileSavedDialog.dispose();
+                
+            }
+        });
+        profileSavedDialog.setLocation(300,400);
+        profileSavedDialog.setSize(170,36);
+        timer.setRepeats(false);
+        timer.start();
+        profileSavedDialog.setVisible(true);
+        System.out.println("Dialog closed");
           
     }
     public void saveAdress(){
@@ -201,6 +232,8 @@ public class MainController implements CardViewController, ItemPanelController,
     private JPanel contentPanel;
     private  JPanel contentPanel2;
     private CardLayout cardLayout;
+    private JButton focusedButton1;
+    private JButton focusedButton2;
     
     
     
@@ -218,6 +251,7 @@ public class MainController implements CardViewController, ItemPanelController,
     private JCheckBox  saveAdr;
     private JCheckBox  saveCrd;
     private JDialog    receiptDialog;
+    private JDialog    profileSavedDialog;
     private JLabel     basketTotalPrice;
     //End of variable declarations
     
@@ -239,6 +273,28 @@ public class MainController implements CardViewController, ItemPanelController,
         this.setContentPanel(contentPanel2);
         this.setContentPanel2(temp);
     }
+    public void buttonSwap(){
+        JButton temp = focusedButton1;
+        System.out.println("got here");
+        this.setButtonFocus(focusedButton2);
+        System.out.println("got here 2");
+        this.setButtonFocus2(temp);
+        System.out.println("no nulls!");
+              
+    }
+    
+     public final void setButtonFocus(JButton focusedButton) {
+        this.focusedButton1 = focusedButton;
+    }
+    public final void setButtonFocus2(JButton focusedButton) {
+        this.focusedButton2 = focusedButton;
+    }
+    public void buttonReColor(){
+        this.focusedButton1.setBackground(Color.green);
+        //buttonSwap();
+        //this.focusedButton1.setBackground(Color.gray);
+    }
+    
     
     public final void setContentPanel(JPanel contentPanel) {
         this.contentPanel = contentPanel;

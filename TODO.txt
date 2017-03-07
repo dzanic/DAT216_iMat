@@ -17,23 +17,23 @@ fortsätta med designen...
 
 Funktionalitet:
 
-Varor kvar vid 2st sök på raken.
+Varor kvar vid 2st sök på raken. 		-> Fixat
 Instruktioner/wizard funkar inte.
 Hjälp-knapp funkar ej.
 
 Favoriter i grid förflyttas ej.
-Kampanjvaror, visar alla varor.
+Kampanjvaror, visar alla varor.			 ->Fake it, finns som stöd behöver inte finnas.
 Resize fö att se varor i grid.
 
-jSpinner=10, visar 0...
-måste aktivt stänga ner inforuta
-
+jSpinner=10, visar 0...				 -> Fixat
+måste aktivt stänga ner inforuta		 -> Fixat	
+ 
 ,0 vid pris?
 
 varor på en rad, fel i grid, dras ut.
-klicka enter vid sök, går ej.
+klicka enter vid sök, går ej.			 -> Fixat
 
-'fortsätt handla' i uppgifter, funkar ej.
+'fortsätt handla' i uppgifter, funkar ej.	 -> Fixat
 'spara' i uppgifter, ingen notis.
 
 
