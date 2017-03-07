@@ -115,7 +115,7 @@
         <Container class="javax.swing.JPanel" name="startPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
+              <Color blue="f5" green="f5" red="f5" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -127,36 +127,44 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="376" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" pref="359" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel22" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel3" min="-2" pref="675" max="-2" attributes="0"/>
+                              <EmptySpace pref="536" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="gotoStoreButton" min="-2" pref="401" max="-2" attributes="0"/>
+                                  <Component id="jButton1" min="-2" pref="401" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="1333" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton1" max="32767" attributes="0"/>
-                          <Component id="gotoStoreButton" min="-2" pref="393" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="156" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="412" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="gotoStoreButton" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="jLabel22" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace pref="224" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="gotoStoreButton" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel3" min="-2" pref="400" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -165,10 +173,10 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="0" type="rgb"/>
+                  <Color blue="f3" green="96" red="21" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Verdana" size="48" style="1"/>
+                  <Font name="SansSerif" size="48" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -179,10 +187,10 @@
             <Component class="javax.swing.JButton" name="gotoStoreButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="99" red="0" type="rgb"/>
+                  <Color blue="50" green="af" red="4c" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Verdana" size="48" style="1"/>
+                  <Font name="SansSerif" size="48" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -193,29 +201,20 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gotoStoreButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="jLabel22">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="150" style="3"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="iMat"/>
-                <Property name="verticalAlignment" type="int" value="1"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imatdesigntest/our_images/iMatLOGO.png"/>
+                </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="24" style="2"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="mataff&#xe4;ren hemma hos dig"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imatdesigntest/our_images/Healthy-Food-PNG-Image.png"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
@@ -223,7 +222,7 @@
         <Container class="javax.swing.JPanel" name="shopViewPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
+              <Color blue="e1" green="e1" red="e1" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -253,7 +252,7 @@
             <Container class="javax.swing.JPanel" name="bannerPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
+                  <Color blue="cd" green="cd" red="cd" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -386,7 +385,7 @@
             <Container class="javax.swing.JPanel" name="mainNavPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
+                  <Color blue="e1" green="e1" red="e1" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -395,7 +394,7 @@
                 <Container class="javax.swing.JPanel" name="shopPanel">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="33" type="rgb"/>
+                      <Color blue="e1" green="e1" red="e1" type="rgb"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -425,7 +424,7 @@
                     <Container class="javax.swing.JPanel" name="navPanel">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="33" green="33" red="33" type="rgb"/>
+                          <Color blue="e1" green="e1" red="e1" type="rgb"/>
                         </Property>
                       </Properties>
 
@@ -750,7 +749,7 @@
                         <Container class="javax.swing.JPanel" name="productPanel">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="33" green="33" red="33" type="rgb"/>
+                              <Color blue="f5" green="f5" red="f5" type="rgb"/>
                             </Property>
                           </Properties>
                           <Constraints>
@@ -773,7 +772,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="669" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="684" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -792,7 +791,7 @@
                                 <Container class="javax.swing.JPanel" name="oProductPanel">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="33" green="33" red="33" type="rgb"/>
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
                                     </Property>
                                   </Properties>
 
@@ -837,7 +836,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="profileNavPanel" max="32767" attributes="0"/>
-                                          <Component id="jScrollPane2" pref="669" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane2" pref="684" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1026,7 +1025,7 @@
                                                       <Component id="infoContShopBut" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="infoSaveBut" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="300" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="314" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
@@ -1239,7 +1238,7 @@
                                                       <Component id="jLabel6" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="totalPriceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="132" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="146" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
@@ -1383,7 +1382,7 @@
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="helpContShop" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="599" max="32767" attributes="0"/>
+                                          <EmptySpace pref="614" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1465,7 +1464,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketTopPanel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="basketScrollPane" pref="423" max="32767" attributes="0"/>
+                                          <Component id="basketScrollPane" pref="438" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketBottomPanel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1817,7 +1816,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketTopPanel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="basketScrollPane1" pref="395" max="32767" attributes="0"/>
+                                          <Component id="basketScrollPane1" pref="410" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketBottomPanel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -2172,7 +2171,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="saveAdrChkBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="377" max="32767" attributes="0"/>
+                                      <EmptySpace pref="392" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2469,7 +2468,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="saveCrdChkBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="408" max="32767" attributes="0"/>
+                                      <EmptySpace pref="423" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2886,7 +2885,7 @@
                                               <Component id="cvcConfirmLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="247" max="32767" attributes="0"/>
+                                          <EmptySpace pref="262" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
