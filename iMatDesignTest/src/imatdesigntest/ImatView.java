@@ -41,7 +41,8 @@ public class ImatView extends javax.swing.JFrame {
                             saveCrdChkBox,
                             ReceiptDialog,
                             profileSavedDialog,
-                            basketTotPriceLab);
+                            basketTotPriceLab,
+                            prevOrderTable);
         
        btnController = new ButtonColoringController(catBtnOne,catBtnOne);
     }

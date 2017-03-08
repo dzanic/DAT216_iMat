@@ -18,6 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 import se.chalmers.ait.dat215.project.*;
@@ -45,7 +46,8 @@ public class MainController implements CardViewController, ItemPanelController,
                             JCheckBox saveCrd,
                             JDialog receiptDialog,
                             JDialog profileSavedDialog,
-                            JLabel basketTotalPrice){
+                            JLabel basketTotalPrice,
+                            JTable historyTable){
                      
     this.infoName         = infoName;
     this.infoMail         = infoMail;
@@ -63,6 +65,7 @@ public class MainController implements CardViewController, ItemPanelController,
     this.receiptDialog    = receiptDialog;
     this.profileSavedDialog = profileSavedDialog;
     this.basketTotalPrice = basketTotalPrice;
+    this.historyTable     = historyTable;
     
 
   
@@ -230,6 +233,9 @@ public class MainController implements CardViewController, ItemPanelController,
         IMatDataHandler.getInstance().placeOrder(true);
     }
 
+    public void fillPrevOrderTable(){
+        
+    }
 
     //General use variable declarations
     private List<Product> currentProductList;
@@ -258,6 +264,7 @@ public class MainController implements CardViewController, ItemPanelController,
     private JDialog    receiptDialog;
     private JDialog    profileSavedDialog;
     private JLabel     basketTotalPrice;
+    private JTable     historyTable;
     //End of variable declarations
     
     //CARDVIEW CONTROLLER OVERRIDES BLOCK
