@@ -63,6 +63,9 @@ public class MainController implements CardViewController, ItemPanelController,
     this.receiptDialog    = receiptDialog;
     this.profileSavedDialog = profileSavedDialog;
     this.basketTotalPrice = basketTotalPrice;
+    
+
+  
     }
     
     public void populateView(ProductCategory prd){
@@ -124,8 +127,8 @@ public class MainController implements CardViewController, ItemPanelController,
     public void populateHistory(){
         this.contentPanel.removeAll();
         orderList = IMatDataHandler.getInstance().getOrders();
-        
-        for(Order order : orderList){
+        System.out.println(orderList.size());
+        for(Order order : orderList){           
             this.newHistoryPanel(order);
         }
         
@@ -174,7 +177,7 @@ public class MainController implements CardViewController, ItemPanelController,
         timer.setRepeats(false);
         timer.start();
         profileSavedDialog.setVisible(true);
-        System.out.println("Dialog closed");
+
           
     }
     public void saveAdress(){
@@ -190,7 +193,6 @@ public class MainController implements CardViewController, ItemPanelController,
         IMatDataHandler.getInstance().getCreditCard().setCardType(objToString(this.infoCardCombo.getSelectedItem()));
         IMatDataHandler.getInstance().getCreditCard().setCardNumber(this.infoCardNum.getText());
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(this.infoCardOwn.getText());
-        System.out.println("this is :" + this.infoCardOwn.getText());
         IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.parseInt(objToString(this.infoMonth.getSelectedItem())));
         IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.parseInt(objToString(this.infoYear.getSelectedItem())));
     }
@@ -236,8 +238,7 @@ public class MainController implements CardViewController, ItemPanelController,
     private JPanel contentPanel;
     private  JPanel contentPanel2;
     private CardLayout cardLayout;
-    private JButton focusedButton1;
-    private JButton focusedButton2;
+
     
     
     
@@ -277,29 +278,7 @@ public class MainController implements CardViewController, ItemPanelController,
         this.setContentPanel(contentPanel2);
         this.setContentPanel2(temp);
     }
-    public void buttonSwap(){
-        JButton temp = focusedButton1;
-        System.out.println("got here");
-        this.setButtonFocus(focusedButton2);
-        System.out.println("got here 2");
-        this.setButtonFocus2(temp);
-        System.out.println("no nulls!");
-              
-    }
-    
-     public final void setButtonFocus(JButton focusedButton) {
-        this.focusedButton1 = focusedButton;
-    }
-    public final void setButtonFocus2(JButton focusedButton) {
-        this.focusedButton2 = focusedButton;
-    }
-    public void buttonReColor(){
-        this.focusedButton1.setBackground(Color.green);
-        //buttonSwap();
-        //this.focusedButton1.setBackground(Color.gray);
-    }
-    
-    
+ 
     public final void setContentPanel(JPanel contentPanel) {
         this.contentPanel = contentPanel;
     }
@@ -356,7 +335,6 @@ public class MainController implements CardViewController, ItemPanelController,
             @Override
             public void mouseClicked(MouseEvent e) {
                 panelSwap();
-                System.out.println("I got E!");
                 nextCard( (new ActionEvent(e.getSource(), e.getID(), e.paramString())));
                 panelSwap();
             }

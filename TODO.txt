@@ -10,7 +10,8 @@ Förtext i sök?
 Modifiera kategorier.
 Stjärna på favoriter-knappen
 Alignments överlag
-Lys upp vald kategori				->Grundlogik implementerad, funkar att lysa upp en knapp.
+Lys upp vald kategori				-> Fixad i limiterad utsträckning, tryck en kategori, tryck profil, fortsätthandla.
+							 Är inte en bug mer än vad det är en limitering av hur funktionen var skriven.
 
 fortsätta med designen...
 ---------------

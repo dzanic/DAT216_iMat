@@ -6,6 +6,7 @@
 package imatdesigntest;
 
 import static com.sun.java.accessibility.util.EventID.KEY;
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -41,6 +42,8 @@ public class ImatView extends javax.swing.JFrame {
                             ReceiptDialog,
                             profileSavedDialog,
                             basketTotPriceLab);
+        
+       btnController = new ButtonColoringController(catBtnOne,catBtnOne);
     }
 
     /**
@@ -106,7 +109,7 @@ public class ImatView extends javax.swing.JFrame {
         dateLabel = new javax.swing.JLabel();
         nrLabel = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        prevOrderTable = new javax.swing.JTable();
         totalPriceLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         historyReturnButton = new javax.swing.JButton();
@@ -785,14 +788,14 @@ public class ImatView extends javax.swing.JFrame {
         profileScPanel.setPreferredSize(new java.awt.Dimension(1000, 500));
         profileScPanel.setLayout(new java.awt.CardLayout());
 
-        prevOrderPanel.setLayout(new java.awt.GridLayout(100, 0));
+        prevOrderPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
         profileScPanel.add(prevOrderPanel, "card3");
 
         dateLabel.setText("jLabel5");
 
         nrLabel.setText("jLabel5");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        prevOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -811,7 +814,7 @@ public class ImatView extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane5.setViewportView(jTable1);
+        jScrollPane5.setViewportView(prevOrderTable);
 
         totalPriceLabel.setText("jLabel5");
 
@@ -2038,8 +2041,6 @@ public class ImatView extends javax.swing.JFrame {
 
         jLabel22.setText("Totalt:");
 
-        totalPriceLabel1.setText("???,?? ");
-
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, basketTotPriceLab, org.jdesktop.beansbinding.ELProperty.create("${text}"), totalPriceLabel1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
@@ -2203,50 +2204,56 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.POD);
-        mController.setButtonFocus((JButton) evt.getSource());
-        mController.buttonReColor();
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnOneActionPerformed
 
     private void catBtnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnTwoActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.BREAD);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwoActionPerformed
 
     private void catBtnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnThreeActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.BERRY);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnThreeActionPerformed
 
     private void catBtnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFourActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.CITRUS_FRUIT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFourActionPerformed
 
     private void catBtnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFiveActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.HOT_DRINKS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFiveActionPerformed
 
     private void catBtnTwelveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnTwelveActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.DAIRIES);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwelveActionPerformed
 
     private void favButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favButtonActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateViewFavorites();
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_favButtonActionPerformed
 
     private void discounstButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discounstButtonActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateViewDiscounted();
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_discounstButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -2256,6 +2263,7 @@ public class ImatView extends javax.swing.JFrame {
         mController.specCard("card2");
         mController.setContentPanel(oProductPanel);
         mController.populateViewSearch(searchTextField.getText());
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void checkOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkOutButtonActionPerformed
@@ -2266,45 +2274,51 @@ public class ImatView extends javax.swing.JFrame {
         mController.setCardView(checkOutPanel);
         mController.specCard("card2");
         mController.setContentPanel(basketGridPanel1);
-        mController.populateBasketView();
-
+        mController.populateBasketView();      
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_checkOutButtonActionPerformed
 
     private void gotoStoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotoStoreButtonActionPerformed
         mController.setContentPanel(entryPanel);
         mController.setCardView(entryPanel);
-        mController.nextCard(evt);
+        mController.nextCard(evt);  
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_gotoStoreButtonActionPerformed
 
     private void catBtnThirteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnThirteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.MELONS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnThirteenActionPerformed
 
     private void catBtnFourteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFourteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.FLOUR_SUGAR_SALT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFourteenActionPerformed
 
     private void catBtnFifthteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFifthteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.NUTS_AND_SEEDS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFifthteenActionPerformed
 
     private void catBtnSixteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnSixteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.PASTA);
+        btnController.buttonRecolor((JButton) evt.getSource());
         
     }//GEN-LAST:event_catBtnSixteenActionPerformed
 
     private void basketContShopBut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basketContShopBut1ActionPerformed
-     mController.setContentPanel(mainNavPanel);
-     mController.setCardView(mainNavPanel);
-     mController.nextCard(evt);
+        mController.setContentPanel(mainNavPanel);
+        mController.setCardView(mainNavPanel);
+        mController.nextCard(evt);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_basketContShopBut1ActionPerformed
 
     private void profileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileButtonActionPerformed
@@ -2316,6 +2330,7 @@ public class ImatView extends javax.swing.JFrame {
      mController.specCard("card4");
      mController.populateProfile();
      mController.setContentPanel2(profileScPanel);
+     btnController.buttonRecolor((JButton) evt.getSource());
      
     }//GEN-LAST:event_profileButtonActionPerformed
 
@@ -2324,6 +2339,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.setContentPanel(profileScPanel);
        mController.setCardView(profileScPanel);
        mController.specCard("card2");
+      btnController.buttonRecolor((JButton) evt.getSource());
        
        
     }//GEN-LAST:event_myInfoButtonActionPerformed
@@ -2335,6 +2351,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.specCard("card3");
        mController.setContentPanel(prevOrderPanel);
        mController.populateHistory();
+       btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_prevOrderButtonActionPerformed
 
     private void basketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basketButtonActionPerformed
@@ -2344,6 +2361,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.specCard("card2");
        mController.setContentPanel(basketGridPanel);
        mController.populateBasketView();
+       btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_basketButtonActionPerformed
 
     private void basketContShopButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basketContShopButActionPerformed
@@ -2354,6 +2372,7 @@ public class ImatView extends javax.swing.JFrame {
         mController.setContentPanel(checkOutPanel);
         mController.setCardView(checkOutPanel);
         mController.nextCard(evt);
+        btnController.buttonRecolor((JButton) evt.getSource());
         
     }//GEN-LAST:event_chkOutBskNxtButActionPerformed
 
@@ -2374,6 +2393,7 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.HERB);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwentyOneActionPerformed
 
     private void seq2backButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seq2backButActionPerformed
@@ -2415,6 +2435,7 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.MEAT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnElevenActionPerformed
 
     private void infoSaveButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoSaveButActionPerformed
@@ -2616,7 +2637,6 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton mainEscapeButton;
     private javax.swing.JPanel mainNavPanel;
     private javax.swing.JPanel mainPanel;
@@ -2627,6 +2647,7 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JPanel oProductPanel;
     private javax.swing.JButton prevOrderButton;
     private javax.swing.JPanel prevOrderPanel;
+    private javax.swing.JTable prevOrderTable;
     private javax.swing.JPanel prevOrderViewPanel;
     private javax.swing.JPanel productPanel;
     private javax.swing.JButton profileButton;
@@ -2663,6 +2684,7 @@ public class ImatView extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     //Variable declaration - user
     private MainController mController;
+    private ButtonColoringController btnController;
     //End of variable declarations - user
 
 
