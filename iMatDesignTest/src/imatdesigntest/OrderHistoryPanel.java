@@ -170,7 +170,7 @@ public class OrderHistoryPanel extends javax.swing.JPanel {
         checkOrderButton.setBackground(new java.awt.Color(33, 33, 33));
         checkOrderButton.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         checkOrderButton.setForeground(new java.awt.Color(245, 245, 245));
-        checkOrderButton.setText("Label?");
+        checkOrderButton.setText("Visa");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
