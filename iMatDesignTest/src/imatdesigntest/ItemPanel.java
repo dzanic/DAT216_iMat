@@ -34,6 +34,7 @@ public class ItemPanel extends javax.swing.JPanel {
        
         this.productImageLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(product, 235,115));
         checkIfFavorite();
+        this.spinnerPanel1.setQuantity(1);
     }
     public ItemPanel(Product product, boolean fav){
        this(product);
@@ -70,13 +71,18 @@ public class ItemPanel extends javax.swing.JPanel {
         jSeparator3 = new javax.swing.JSeparator();
         productPriceLabel = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        spinnerPanel1 = new imatdesigntest.spinnerPanel();
         jLabel4 = new javax.swing.JLabel();
+        spinnerPanel1 = new imatdesigntest.spinnerPanel();
         jPanel3 = new javax.swing.JPanel();
         productImageLabel = new javax.swing.JLabel();
 
         informationDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
         informationDialog.setType(java.awt.Window.Type.UTILITY);
+        informationDialog.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                informationDialogFocusLost(evt);
+            }
+        });
 
         jLabel1.setText("Extra info table");
         jLabel1.setText("<html>Lorem ipsum dolor sit amet, c"
@@ -254,7 +260,7 @@ public class ItemPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
+                .addContainerGap()
                 .addComponent(spinnerPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -271,13 +277,14 @@ public class ItemPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(productPriceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(spinnerPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(productPriceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(spinnerPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -360,6 +367,10 @@ public class ItemPanel extends javax.swing.JPanel {
         informationDialog.setVisible(true);
         
     }//GEN-LAST:event_infoButtonActionPerformed
+
+    private void informationDialogFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_informationDialogFocusLost
+        informationDialog.dispose();
+    }//GEN-LAST:event_informationDialogFocusLost
     
     private void checkIfFavorite(){
        for (Product p : IMatDataHandler.getInstance().favorites()){

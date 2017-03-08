@@ -11,6 +11,9 @@
           <Value id="UTILITY"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="informationDialogFocusLost"/>
+      </Events>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -300,7 +303,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="spinnerPanel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSeparator4" min="-2" max="-2" attributes="0"/>
@@ -319,13 +322,15 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
-                      <Component id="productPriceLabel" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
-                      <Component id="spinnerPanel1" alignment="1" max="32767" attributes="0"/>
-                      <Component id="addToCartButton" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jLabel4" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
+                          <Component id="productPriceLabel" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="addToCartButton" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jLabel4" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="spinnerPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -359,12 +364,12 @@
             <Property name="orientation" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="imatdesigntest.spinnerPanel" name="spinnerPanel1">
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" value="kr/st"/>
           </Properties>
+        </Component>
+        <Component class="imatdesigntest.spinnerPanel" name="spinnerPanel1">
         </Component>
       </SubComponents>
     </Container>

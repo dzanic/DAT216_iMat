@@ -5,6 +5,8 @@
  */
 package imatdesigntest;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -35,8 +37,10 @@ public class ImatView extends javax.swing.JFrame {
                             infoYearCombo,
                             saveAdrChkBox,
                             saveCrdChkBox,
-                            ReceiptDialog,
+                            receiptDialog,
+                            profileSavedDialog,
                             basketTotPriceLab);
+        btnController = new ButtonColoringController(catBtnOne,catBtnOne);
     }
 
     /**
@@ -49,9 +53,12 @@ public class ImatView extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        ReceiptDialog = new javax.swing.JDialog();
+        receiptDialog = new javax.swing.JDialog();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        profileSavedDialog = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
         entryPanel = new javax.swing.JPanel();
         startPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -252,37 +259,74 @@ public class ImatView extends javax.swing.JFrame {
         seq4backBut = new javax.swing.JButton();
         confirmBuyBut = new javax.swing.JButton();
 
-        ReceiptDialog.setBackground(new java.awt.Color(153, 153, 153));
-        ReceiptDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
-        ReceiptDialog.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
-        ReceiptDialog.setType(java.awt.Window.Type.UTILITY);
+        receiptDialog.setBackground(new java.awt.Color(153, 153, 153));
+        receiptDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
+        receiptDialog.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+        receiptDialog.setType(java.awt.Window.Type.UTILITY);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Köpet har slutförts!");
 
         jLabel13.setText("Varorna är preliminärt bokade att anlända DD/MM/YY - HH/MM/SS");
 
-        javax.swing.GroupLayout ReceiptDialogLayout = new javax.swing.GroupLayout(ReceiptDialog.getContentPane());
-        ReceiptDialog.getContentPane().setLayout(ReceiptDialogLayout);
-        ReceiptDialogLayout.setHorizontalGroup(
-            ReceiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReceiptDialogLayout.createSequentialGroup()
+        javax.swing.GroupLayout receiptDialogLayout = new javax.swing.GroupLayout(receiptDialog.getContentPane());
+        receiptDialog.getContentPane().setLayout(receiptDialogLayout);
+        receiptDialogLayout.setHorizontalGroup(
+            receiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(receiptDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(ReceiptDialogLayout.createSequentialGroup()
+            .addGroup(receiptDialogLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
-        ReceiptDialogLayout.setVerticalGroup(
-            ReceiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReceiptDialogLayout.createSequentialGroup()
+        receiptDialogLayout.setVerticalGroup(
+            receiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(receiptDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        profileSavedDialog.setUndecorated(true);
+        profileSavedDialog.setType(java.awt.Window.Type.UTILITY);
+
+        jPanel5.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel46.setBackground(new java.awt.Color(222, 222, 121));
+        jLabel46.setText("Dina uppgifter har sparats!");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel46)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel46)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout profileSavedDialogLayout = new javax.swing.GroupLayout(profileSavedDialog.getContentPane());
+        profileSavedDialog.getContentPane().setLayout(profileSavedDialogLayout);
+        profileSavedDialogLayout.setHorizontalGroup(
+            profileSavedDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        profileSavedDialogLayout.setVerticalGroup(
+            profileSavedDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -360,6 +404,11 @@ public class ImatView extends javax.swing.JFrame {
         searchTextField.setBackground(new java.awt.Color(245, 245, 245));
         searchTextField.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         searchTextField.setForeground(new java.awt.Color(33, 33, 33));
+        searchTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchTextFieldKeyPressed(evt);
+            }
+        });
 
         searchButton.setBackground(new java.awt.Color(66, 133, 244));
         searchButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -860,6 +909,11 @@ public class ImatView extends javax.swing.JFrame {
         infoContShopBut.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         infoContShopBut.setForeground(new java.awt.Color(245, 245, 245));
         infoContShopBut.setText("Fortsätt handla");
+        infoContShopBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoContShopButActionPerformed(evt);
+            }
+        });
 
         infoSaveBut.setBackground(new java.awt.Color(66, 133, 244));
         infoSaveBut.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -2265,48 +2319,56 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.POD);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnOneActionPerformed
 
     private void catBtnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnTwoActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.BREAD);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwoActionPerformed
 
     private void catBtnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnThreeActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.BERRY);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnThreeActionPerformed
 
     private void catBtnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFourActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.CITRUS_FRUIT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFourActionPerformed
 
     private void catBtnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFiveActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.HOT_DRINKS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFiveActionPerformed
 
     private void catBtnTwelveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnTwelveActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.DAIRIES);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwelveActionPerformed
 
     private void favButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favButtonActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateViewFavorites();
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_favButtonActionPerformed
 
     private void discounstButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discounstButtonActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateViewDiscounted();
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_discounstButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -2316,6 +2378,7 @@ public class ImatView extends javax.swing.JFrame {
         mController.specCard("card2");
         mController.setContentPanel(oProductPanel);
         mController.populateViewSearch(searchTextField.getText());
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void checkOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkOutButtonActionPerformed
@@ -2327,6 +2390,7 @@ public class ImatView extends javax.swing.JFrame {
         mController.specCard("card2");
         mController.setContentPanel(basketGridPanel1);
         mController.populateBasketView();
+        btnController.buttonRecolor((JButton) evt.getSource());
 
     }//GEN-LAST:event_checkOutButtonActionPerformed
 
@@ -2334,30 +2398,35 @@ public class ImatView extends javax.swing.JFrame {
         mController.setContentPanel(entryPanel);
         mController.setCardView(entryPanel);
         mController.nextCard(evt);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_gotoStoreButtonActionPerformed
 
     private void catBtnThirteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnThirteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.MELONS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnThirteenActionPerformed
 
     private void catBtnFourteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFourteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.FLOUR_SUGAR_SALT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFourteenActionPerformed
 
     private void catBtnFifthteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnFifthteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.NUTS_AND_SEEDS);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnFifthteenActionPerformed
 
     private void catBtnSixteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnSixteenActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.PASTA);
+        btnController.buttonRecolor((JButton) evt.getSource());
         
     }//GEN-LAST:event_catBtnSixteenActionPerformed
 
@@ -2365,6 +2434,7 @@ public class ImatView extends javax.swing.JFrame {
      mController.setContentPanel(mainNavPanel);
      mController.setCardView(mainNavPanel);
      mController.nextCard(evt);
+     btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_basketContShopBut1ActionPerformed
 
     private void profileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileButtonActionPerformed
@@ -2376,6 +2446,7 @@ public class ImatView extends javax.swing.JFrame {
      mController.specCard("card4");
      mController.populateProfile();
      mController.setContentPanel2(profileScPanel);
+     btnController.buttonRecolor((JButton) evt.getSource());
      
     }//GEN-LAST:event_profileButtonActionPerformed
 
@@ -2384,6 +2455,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.setContentPanel(profileScPanel);
        mController.setCardView(profileScPanel);
        mController.specCard("card2");
+       btnController.buttonRecolor((JButton) evt.getSource());
        
        
     }//GEN-LAST:event_myInfoButtonActionPerformed
@@ -2395,6 +2467,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.specCard("card3");
        mController.setContentPanel(prevOrderPanel);
        mController.populateHistory();
+       btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_prevOrderButtonActionPerformed
 
     private void basketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basketButtonActionPerformed
@@ -2404,6 +2477,7 @@ public class ImatView extends javax.swing.JFrame {
        mController.specCard("card2");
        mController.setContentPanel(basketGridPanel);
        mController.populateBasketView();
+       btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_basketButtonActionPerformed
 
     private void basketContShopButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basketContShopButActionPerformed
@@ -2434,6 +2508,7 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.HERB);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnTwentyOneActionPerformed
 
     private void infoSaveButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoSaveButActionPerformed
@@ -2479,7 +2554,26 @@ public class ImatView extends javax.swing.JFrame {
         refocus("card3");
         mController.setContentPanel(oProductPanel);
         mController.populateView(ProductCategory.MEAT);
+        btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnElevenActionPerformed
+
+    private void searchTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTextFieldKeyPressed
+         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+             refocus("card3");
+            mController.setContentPanel(mainNavPanel);
+            mController.setCardView(mainNavPanel);
+            mController.specCard("card2");
+            mController.setContentPanel(oProductPanel);
+            mController.populateViewSearch(searchTextField.getText());
+            
+        }
+    }//GEN-LAST:event_searchTextFieldKeyPressed
+
+    private void infoContShopButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoContShopButActionPerformed
+       mController.setContentPanel(mainPanel);
+       mController.setCardView(mainPanel);
+       mController.specCard("card3");
+    }//GEN-LAST:event_infoContShopButActionPerformed
 
     //Helper method, cuts the amount of code in the
     //category buttons with around 2/3's
@@ -2490,7 +2584,6 @@ public class ImatView extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog ReceiptDialog;
     private javax.swing.JPanel bannerPanel;
     private javax.swing.JPanel basketBottomPanel;
     private javax.swing.JPanel basketBottomPanel1;
@@ -2640,12 +2733,14 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2667,7 +2762,9 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JLabel profileLabel;
     private javax.swing.JPanel profileNavPanel;
     private javax.swing.JPanel profilePanel;
+    private javax.swing.JDialog profileSavedDialog;
     private javax.swing.JPanel profileScPanel;
+    private javax.swing.JDialog receiptDialog;
     private javax.swing.JCheckBox saveAdrChkBox;
     private javax.swing.JCheckBox saveCrdChkBox;
     private javax.swing.JButton searchButton;
@@ -2696,6 +2793,7 @@ public class ImatView extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     //Variable declaration - user
     private MainController mController;
+    private ButtonColoringController btnController;
     //End of variable declarations - user
 
 
