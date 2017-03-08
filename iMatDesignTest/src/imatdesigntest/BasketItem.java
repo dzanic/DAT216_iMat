@@ -58,6 +58,12 @@ public class BasketItem extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         bskItmRmvBut = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(245, 245, 245));
+
+        jPanel3.setBackground(new java.awt.Color(245, 245, 245));
+
+        bskItmNamLab.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        bskItmNamLab.setForeground(new java.awt.Color(33, 33, 33));
         bskItmNamLab.setText("Namn");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -77,6 +83,10 @@ public class BasketItem extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
+
+        quantityField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        quantityField.setForeground(new java.awt.Color(33, 33, 33));
         quantityField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         quantityField.setText("0");
         quantityField.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +95,8 @@ public class BasketItem extends javax.swing.JPanel {
             }
         });
 
-        decButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        decButton.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        decButton.setForeground(new java.awt.Color(33, 33, 33));
         decButton.setText("-");
         decButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +104,8 @@ public class BasketItem extends javax.swing.JPanel {
             }
         });
 
-        incButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        incButton.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        incButton.setForeground(new java.awt.Color(33, 33, 33));
         incButton.setText("+");
         incButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +137,10 @@ public class BasketItem extends javax.swing.JPanel {
                 .addGap(19, 19, 19))
         );
 
+        jPanel4.setBackground(new java.awt.Color(245, 245, 245));
+
+        bskOneItmPrice.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        bskOneItmPrice.setForeground(new java.awt.Color(33, 33, 33));
         bskOneItmPrice.setText("á pris");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -144,6 +160,10 @@ public class BasketItem extends javax.swing.JPanel {
                 .addGap(23, 23, 23))
         );
 
+        jPanel5.setBackground(new java.awt.Color(245, 245, 245));
+
+        bskItmPrice.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        bskItmPrice.setForeground(new java.awt.Color(33, 33, 33));
         bskItmPrice.setText("Pris");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -163,6 +183,10 @@ public class BasketItem extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(245, 245, 245));
+
+        bskItmRmvBut.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        bskItmRmvBut.setForeground(new java.awt.Color(33, 33, 33));
         bskItmRmvBut.setText("x");
         bskItmRmvBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +208,7 @@ public class BasketItem extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(bskItmRmvBut)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
