@@ -28,8 +28,7 @@ public class IMatDesignTest {
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ImatView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        
+        }      
         new ImatView().setVisible(true);
         
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {

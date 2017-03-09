@@ -7,16 +7,20 @@ package imatdesigntest;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 import se.chalmers.ait.dat215.project.*;
@@ -44,7 +48,14 @@ public class MainController implements CardViewController, ItemPanelController,
                             JCheckBox saveCrd,
                             JDialog receiptDialog,
                             JDialog profileSavedDialog,
-                            JLabel basketTotalPrice){
+                            JDialog cannotSaveDialog,
+                            JLabel basketTotalPrice,
+                            JTable prevOrderTable,
+                            JLabel dateLabel,
+                            JLabel orderNrLabel,
+                            JLabel totalPriceLabel,
+                            JLabel errorMessageLabel,
+                            JButton finalButton){
     this.infoName         = infoName;
     this.infoMail         = infoMail;
     this.infoPhone        = infoPhone ;
@@ -60,7 +71,14 @@ public class MainController implements CardViewController, ItemPanelController,
     this.saveCrd          = saveCrd;
     this.receiptDialog    = receiptDialog;
     this.profileSavedDialog = profileSavedDialog;
+    this.cannotSaveDialog = cannotSaveDialog;
     this.basketTotalPrice = basketTotalPrice;
+    this.prevOrderTable   = prevOrderTable;
+    this.dateLabel        = dateLabel;
+    this.orderNrLabel     = orderNrLabel;
+    this.totalPriceLabel  = totalPriceLabel;
+    this.errorMessageLabel= errorMessageLabel;
+    this.finalButton     = finalButton;
     }
     
     public void populateView(ProductCategory prd){
@@ -115,7 +133,7 @@ public class MainController implements CardViewController, ItemPanelController,
         this.basketTotalPrice.setText(String.valueOf(temp));
         this.contentPanel.revalidate();
         this.contentPanel.repaint();
-    }
+    }  
     public void populateHistory(){
         this.contentPanel.removeAll();
         orderList = IMatDataHandler.getInstance().getOrders();
@@ -128,18 +146,20 @@ public class MainController implements CardViewController, ItemPanelController,
                     
     }
     public void populateProfile(){
-        //TODO
-        this.infoName.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() + " "
+        this.infoName.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() 
                             + IMatDataHandler.getInstance().getCustomer().getLastName());
         this.infoMail.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
         this.infoPhone.setText(IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
-        this.infoAdr.setText(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+        this.infoAdr.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
         this.infoZip.setText(IMatDataHandler.getInstance().getCustomer().getPostCode());
-        this.infoCardCombo.setSelectedIndex(0); //Fix a check to set visa -> 0 ; mastercard -> 1 etc getCreditCard().getCardType()
-        this.infoCardNum.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
+        
+        this.infoCardCombo.setSelectedItem(IMatDataHandler.getInstance().getCreditCard().getCardType());
+        this.infoCardNum.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());       
         this.infoCardOwn.setText(IMatDataHandler.getInstance().getCreditCard().getHoldersName());
-        this.infoMonth.setSelectedIndex(0);
+        this.infoMonth.setSelectedIndex(IMatDataHandler.getInstance().getCreditCard().getValidMonth());
         this.infoYear.setSelectedIndex(0);
+        this.infoCity.setText(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+        this.infoYear.setSelectedItem(String.valueOf( IMatDataHandler.getInstance().getCreditCard().getValidYear()));
     }
     public void populateFinalBasketView(){   
         this.contentPanel.removeAll();
@@ -150,33 +170,41 @@ public class MainController implements CardViewController, ItemPanelController,
             this.newBasketFixedItem(shoppingItem);
         }    
     }
+    public void enableFinal(){
+       if(!IMatDataHandler.getInstance().isCustomerComplete() ){
+            IMatDataHandler.getInstance().getCustomer().setLastName("SnigelStröm");
+            finalButton.setEnabled(false);
+            generateMessage("Fattas information i din profil!", this.contentPanel, Color.RED);
+             
+        } else if ((IMatDataHandler.getInstance().getShoppingCart().getItems().isEmpty())){
+            finalButton.setEnabled(false);      
+            generateMessage("Fattas information i din profil!", this.contentPanel, Color.RED);
+            generateMessage("Varukorgen är tom!", this.contentPanel, Color.RED);
+            
+        } else {
+            finalButton.setEnabled(true);
+        }
+              
+    }
     
-    public void saveProfile(){     
+    public void saveProfile(){
+        if (checkEmptyAdressFields() && checkEmptyCardFields()){
+                   
         this.saveAdress();
         this.saveCard();
         
-         Timer timer = new Timer(2000, new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-               profileSavedDialog.setVisible(false);
-               profileSavedDialog.dispose();
-                
-            }
-        });
-        profileSavedDialog.setLocation(300,400);
-        profileSavedDialog.setSize(170,36);
-        timer.setRepeats(false);
-        timer.start();
-        profileSavedDialog.setVisible(true);
-          
+            generateMessage("Sparat!", this.infoYear, Color.GREEN);
+
+        }
     }
-    public void saveAdress(){
+    public void saveAdress(){     
         IMatDataHandler.getInstance().getCustomer().setFirstName(this.infoName.getText()); //saves the entire name to first name
         IMatDataHandler.getInstance().getCustomer().setEmail(this.infoMail.getText());
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber(this.infoPhone.getText());
         IMatDataHandler.getInstance().getCustomer().setPostAddress(this.infoCity.getText());
         IMatDataHandler.getInstance().getCustomer().setPostCode(this.infoZip.getText());
         IMatDataHandler.getInstance().getCustomer().setAddress(this.infoAdr.getText());
-        
+               
     }
     public void saveCard(){
         IMatDataHandler.getInstance().getCreditCard().setCardType(objToString(this.infoCardCombo.getSelectedItem()));
@@ -184,7 +212,82 @@ public class MainController implements CardViewController, ItemPanelController,
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(this.infoCardOwn.getText());
         IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.parseInt(objToString(this.infoMonth.getSelectedItem())));
         IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.parseInt(objToString(this.infoYear.getSelectedItem())));
+        
     }
+    private boolean checkEmptyAdressFields(){
+         
+               
+        if(this.infoName.getText().isEmpty()){
+            generateMessage("Var god ifyll ditt namn!", this.infoName, Color.RED);            
+            return false;
+            
+        } else if (this.infoMail.getText().isEmpty()){
+            generateMessage("Var god ifyll din email adress!", this.infoMail, Color.RED);
+            return false;
+            
+        } else if (this.infoPhone.getText().isEmpty()){
+            generateMessage("Var god ifyll telefonnummer!", this.infoPhone, Color.RED);
+            return false;
+            
+        } else if (this.infoCity.getText().isEmpty()){
+            generateMessage("var god ifyll Ort!", this.infoCity, Color.RED);
+            return false;
+            
+        } else if (this.infoZip.getText().isEmpty()){
+            generateMessage("var god ifyll Post nummer", this.infoZip, Color.RED);
+            return false;
+            
+        } else if (this.infoAdr.getText().isEmpty()){
+            generateMessage("Var god ifyll Post Adress!", this.infoAdr, Color.RED);
+            return false;
+        }
+               
+        return true;
+    }
+   
+    private boolean checkEmptyCardFields(){
+        if (this.infoCardCombo.getSelectedIndex() == 0){
+            generateMessage("Var god välj kort typ!", this.infoCardCombo, Color.RED);
+            return false;
+            
+        } else if (this.infoCardNum.getText().isEmpty()){
+            generateMessage("Var god ifyll kortnummer!", this.infoCardNum, Color.RED);
+            return false;
+            
+        } else if (this.infoCardOwn.getText().isEmpty()){
+            generateMessage("Var god ifyll kort innehavarens namn!", this.infoCardOwn, Color.RED);
+            return false;
+            
+        } else if (this.infoMonth.getSelectedIndex() == 0){
+            generateMessage("Var god välj utgångsmånad!", this.infoMonth, Color.RED);
+            return false;
+            
+        } else if (this.infoYear.getSelectedIndex() == 0){
+            generateMessage("Var god välj utgångsår!", this.infoYear, Color.RED);
+            return false;
+        }
+        return true;
+    }
+    
+    //Helper function, this negates the need to send several dialogs that only
+    // really differ in message/color.
+    private void generateMessage(String error, Component c, Color cl ){
+        Timer timer = new Timer(2000, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               cannotSaveDialog.setVisible(false);
+               cannotSaveDialog.dispose();
+                
+            }
+        });        
+        cannotSaveDialog.setLocationRelativeTo(c);
+            cannotSaveDialog.setSize(170,36);
+            errorMessageLabel.setText(error);
+            errorMessageLabel.getParent().setBackground(cl);
+            timer.setRepeats(false);
+            timer.start();
+            cannotSaveDialog.setVisible(true);
+    }
+    
     
     public void checkSave(){
         if (this.saveAdr.isSelected()){
@@ -195,17 +298,17 @@ public class MainController implements CardViewController, ItemPanelController,
         }
     }
     public void flush(){
-        this.infoAdr.setText("");
+        this.infoAdr.setText(null);
         this.infoCardCombo.setSelectedIndex(0);
-        this.infoCardNum.setText("");
-        this.infoCardOwn.setText("");
-        this.infoCity.setText("");
-        this.infoMail.setText("");
+        this.infoCardNum.setText(null);
+        this.infoCardOwn.setText(null);
+        this.infoCity.setText(null);
+        this.infoMail.setText(null);
         this.infoMonth.setSelectedIndex(0);
         this.infoYear.setSelectedIndex(0);
-        this.infoName.setText("");
-        this.infoPhone.setText("");
-        this.infoZip.setText("");
+        this.infoName.setText(null);
+        this.infoPhone.setText(null);
+        this.infoZip.setText(null);
         
         IMatDataHandler.getInstance().getShoppingCart().clear();
     }
@@ -216,7 +319,11 @@ public class MainController implements CardViewController, ItemPanelController,
             
     }
     public void confirmOrder(){
-        IMatDataHandler.getInstance().placeOrder(true);
+            IMatDataHandler.getInstance().placeOrder(true);
+            generateReceipt();
+            checkSave();
+            flush();
+        
     }
 
 
@@ -227,6 +334,7 @@ public class MainController implements CardViewController, ItemPanelController,
     private JPanel contentPanel;
     private  JPanel contentPanel2;
     private CardLayout cardLayout;
+    private JButton    finalButton;
     
     
     
@@ -245,7 +353,13 @@ public class MainController implements CardViewController, ItemPanelController,
     private JCheckBox  saveCrd;
     private JDialog    receiptDialog;
     private JDialog    profileSavedDialog;
+    private JDialog    cannotSaveDialog;
     private JLabel     basketTotalPrice;
+    private JTable     prevOrderTable;
+    private JLabel     dateLabel;
+    private JLabel     orderNrLabel;
+    private JLabel     totalPriceLabel;
+    private JLabel     errorMessageLabel;
     
     //End of variable declarations
     
@@ -325,6 +439,7 @@ public class MainController implements CardViewController, ItemPanelController,
             public void mouseClicked(MouseEvent e) {
                 panelSwap();
                 System.out.println("I got E!");
+                fillOrderTable(orderHistoryPanel.getOrder());
                 nextCard( (new ActionEvent(e.getSource(), e.getID(), e.paramString())));
                 panelSwap();
             }
@@ -339,7 +454,23 @@ public class MainController implements CardViewController, ItemPanelController,
         });
        
     }
-    
+    public void fillOrderTable(Order order){
+        int j= 0;
+        this.dateLabel.setText( (new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")).format(order.getDate()));
+        this.orderNrLabel.setText(String.valueOf(order.getOrderNumber()));
+        this.totalPriceLabel.setText("something");  //Need to do a forloop calculating everything because the total isnt supported by the backend.
+        for(ShoppingItem shopItem : order.getItems()){
+            
+               this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getName(), j, 0);
+               this.prevOrderTable.getModel().setValueAt(shopItem.getAmount(), j, 1);
+               this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getPrice(), j, 2);
+               this.prevOrderTable.getModel().setValueAt(shopItem.getTotal(), j, 3);
+            
+            j++;
+        }
+       
+        
+    }
     @Override
     public void specCard(String name){
         this.cardLayout.show(contentPanel, name);

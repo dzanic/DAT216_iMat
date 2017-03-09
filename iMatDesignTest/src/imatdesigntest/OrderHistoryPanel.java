@@ -18,6 +18,7 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
  */
 public class OrderHistoryPanel extends javax.swing.JPanel {
 
+    private Order thisOrder;
     /**
      * Creates new form OrderHistoryPanel
      */
@@ -30,6 +31,7 @@ public class OrderHistoryPanel extends javax.swing.JPanel {
         this.orderNrLabel.setText(String.valueOf(order.getOrderNumber()));
         this.orderPriceLabel.setText(String.valueOf(calculateTotal(order.getItems())));
         this.orderItemLabel.setText(order.getItems().get(0).getProduct().getName());
+        this.thisOrder = order;
     }
 
     public double calculateTotal(List<ShoppingItem> orderItemList){
@@ -223,6 +225,9 @@ public class OrderHistoryPanel extends javax.swing.JPanel {
         this.setBorder(null);
     }//GEN-LAST:event_formMouseExited
 
+    public Order getOrder(){
+        return thisOrder;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton checkOrderButton;
