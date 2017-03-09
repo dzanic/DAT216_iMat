@@ -33,7 +33,8 @@ public class MainController implements CardViewController, ItemPanelController,
                                        BasketItemPanelController, BasketItemFixedController,
                                        OrderHistoryPanelController{
 
-    public MainController(  JTextField infoName,
+    public MainController(  JTextField infoFstName,
+                            JTextField infoLstName,
                             JTextField infoMail,
                             JTextField infoPhone,
                             JTextField infoAdr,
@@ -44,6 +45,7 @@ public class MainController implements CardViewController, ItemPanelController,
                             JTextField infoCardOwn,
                             JComboBox  infoMonth,
                             JComboBox  infoYear,
+                            JTextField cvcField,
                             JCheckBox saveAdr,
                             JCheckBox saveCrd,
                             JDialog receiptDialog,
@@ -56,7 +58,8 @@ public class MainController implements CardViewController, ItemPanelController,
                             JLabel totalPriceLabel,
                             JLabel errorMessageLabel,
                             JButton finalButton){
-    this.infoName         = infoName;
+    this.infoFstName         = infoFstName;
+    this.infoLstName      = infoLstName;
     this.infoMail         = infoMail;
     this.infoPhone        = infoPhone ;
     this.infoAdr          = infoAdr;
@@ -67,6 +70,7 @@ public class MainController implements CardViewController, ItemPanelController,
     this.infoCardOwn      = infoCardOwn;
     this.infoMonth        = infoMonth;
     this.infoYear         = infoYear;
+    this.cvcField         = cvcField;
     this.saveAdr          = saveAdr;
     this.saveCrd          = saveCrd;
     this.receiptDialog    = receiptDialog;
@@ -79,6 +83,7 @@ public class MainController implements CardViewController, ItemPanelController,
     this.totalPriceLabel  = totalPriceLabel;
     this.errorMessageLabel= errorMessageLabel;
     this.finalButton     = finalButton;
+      
     }
     
     public void populateView(ProductCategory prd){
@@ -146,8 +151,8 @@ public class MainController implements CardViewController, ItemPanelController,
                     
     }
     public void populateProfile(){
-        this.infoName.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() 
-                            + IMatDataHandler.getInstance().getCustomer().getLastName());
+        this.infoFstName.setText(IMatDataHandler.getInstance().getCustomer().getFirstName()); 
+        this.infoLstName.setText(IMatDataHandler.getInstance().getCustomer().getLastName());           
         this.infoMail.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
         this.infoPhone.setText(IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
         this.infoAdr.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
@@ -171,8 +176,7 @@ public class MainController implements CardViewController, ItemPanelController,
         }    
     }
     public void enableFinal(){
-       if(!IMatDataHandler.getInstance().isCustomerComplete() ){
-            IMatDataHandler.getInstance().getCustomer().setLastName("SnigelStröm");
+       if(!IMatDataHandler.getInstance().isCustomerComplete() && cvcField.getText().isEmpty() ){           
             finalButton.setEnabled(false);
             generateMessage("Fattas information i din profil!", this.contentPanel, Color.RED);
              
@@ -198,7 +202,8 @@ public class MainController implements CardViewController, ItemPanelController,
         }
     }
     public void saveAdress(){     
-        IMatDataHandler.getInstance().getCustomer().setFirstName(this.infoName.getText()); //saves the entire name to first name
+        IMatDataHandler.getInstance().getCustomer().setFirstName(this.infoFstName.getText()); 
+        IMatDataHandler.getInstance().getCustomer().setLastName(this.infoLstName.getText()); 
         IMatDataHandler.getInstance().getCustomer().setEmail(this.infoMail.getText());
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber(this.infoPhone.getText());
         IMatDataHandler.getInstance().getCustomer().setPostAddress(this.infoCity.getText());
@@ -217,11 +222,15 @@ public class MainController implements CardViewController, ItemPanelController,
     private boolean checkEmptyAdressFields(){
          
                
-        if(this.infoName.getText().isEmpty()){
-            generateMessage("Var god ifyll ditt namn!", this.infoName, Color.RED);            
+        if(this.infoFstName.getText().isEmpty()){
+            generateMessage("Var god ifyll ditt förnamn!", this.infoFstName, Color.RED);            
             return false;
             
-        } else if (this.infoMail.getText().isEmpty()){
+        }else if (this.infoLstName.getText().isEmpty()){
+            generateMessage("Var god ifyll ditt efternamn!", this.infoLstName, Color.RED);            
+            return false;
+        }
+        else if (this.infoMail.getText().isEmpty()){
             generateMessage("Var god ifyll din email adress!", this.infoMail, Color.RED);
             return false;
             
@@ -265,7 +274,7 @@ public class MainController implements CardViewController, ItemPanelController,
         } else if (this.infoYear.getSelectedIndex() == 0){
             generateMessage("Var god välj utgångsår!", this.infoYear, Color.RED);
             return false;
-        }
+        } 
         return true;
     }
     
@@ -306,7 +315,7 @@ public class MainController implements CardViewController, ItemPanelController,
         this.infoMail.setText(null);
         this.infoMonth.setSelectedIndex(0);
         this.infoYear.setSelectedIndex(0);
-        this.infoName.setText(null);
+        this.infoFstName.setText(null);
         this.infoPhone.setText(null);
         this.infoZip.setText(null);
         
@@ -324,8 +333,7 @@ public class MainController implements CardViewController, ItemPanelController,
             generateReceipt();
             checkSave();
             flush();
-       IMatDataHandler.getInstance().getOrders().clear();
-       IMatDataHandler.getInstance().shutDown();
+       
     }
 
 
@@ -340,12 +348,14 @@ public class MainController implements CardViewController, ItemPanelController,
     
     
     
-    private JTextField infoName;
+    private JTextField infoFstName;
+    private JTextField infoLstName;
     private JTextField infoMail;
     private JTextField infoPhone;
     private JTextField infoAdr;
     private JTextField infoZip;
     private JTextField infoCity;
+    private JTextField cvcField;
     private JComboBox  infoCardCombo;
     private JTextField infoCardNum;
     private JTextField infoCardOwn;
@@ -362,6 +372,7 @@ public class MainController implements CardViewController, ItemPanelController,
     private JLabel     orderNrLabel;
     private JLabel     totalPriceLabel;
     private JLabel     errorMessageLabel;
+    
     
     //End of variable declarations
     

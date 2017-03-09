@@ -26,6 +26,7 @@ public class ImatView extends javax.swing.JFrame {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
         mController = new MainController(infoFstNameField,
+                                        infoLstNameField,
                             infoMailField,
                             infoPhoneField,
                             infoAdrField,
@@ -36,6 +37,7 @@ public class ImatView extends javax.swing.JFrame {
                             infoCrdOwnField,
                             infoMonthCombo,
                             infoYearCombo,
+                            cvcField,
                             saveAdrChkBox,
                             saveCrdChkBox,
                             receiptDialog,
