@@ -88,7 +88,6 @@ public class ImatView extends javax.swing.JFrame {
         shopPanel = new javax.swing.JPanel();
         navPanel = new javax.swing.JPanel();
         favButton = new javax.swing.JButton();
-        discounstButton = new javax.swing.JButton();
         catBtnOne = new javax.swing.JButton();
         catBtnTwo = new javax.swing.JButton();
         catBtnThree = new javax.swing.JButton();
@@ -427,7 +426,7 @@ public class ImatView extends javax.swing.JFrame {
             .addGroup(startPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
                 .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, startPanelLayout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -548,20 +547,10 @@ public class ImatView extends javax.swing.JFrame {
         favButton.setBackground(new java.awt.Color(244, 156, 11));
         favButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         favButton.setForeground(new java.awt.Color(245, 245, 245));
-        favButton.setText("Favoriter");
+        favButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/favourite-2-icon.png"))); // NOI18N
         favButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 favButtonActionPerformed(evt);
-            }
-        });
-
-        discounstButton.setBackground(new java.awt.Color(234, 67, 53));
-        discounstButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        discounstButton.setForeground(new java.awt.Color(245, 245, 245));
-        discounstButton.setText("Kampanj");
-        discounstButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                discounstButtonActionPerformed(evt);
             }
         });
 
@@ -703,9 +692,7 @@ public class ImatView extends javax.swing.JFrame {
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(discounstButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(favButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                .addComponent(favButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(catBtnOne, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
@@ -741,34 +728,31 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(checkOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(navPanelLayout.createSequentialGroup()
-                        .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(navPanelLayout.createSequentialGroup()
-                                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(favButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(navPanelLayout.createSequentialGroup()
                                     .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(navPanelLayout.createSequentialGroup()
-                                            .addComponent(favButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
                                             .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(catBtnThree, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(catBtnTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(11, 11, 11))
+                                        .addGroup(navPanelLayout.createSequentialGroup()
+                                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(catBtnEleven, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                    .addComponent(catBtnFour, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(catBtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGap(11, 11, 11)))
-                                    .addGroup(navPanelLayout.createSequentialGroup()
-                                        .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(catBtnEleven, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(catBtnFour, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(catBtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(11, 11, 11)))
-                                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(catBtnTwentyOne, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(catBtnTwelve, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(discounstButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(catBtnSixteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(catBtnFifthteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(catBtnThirteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(catBtnFourteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(catBtnOne, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(catBtnTwentyOne, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(catBtnTwelve, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(catBtnSixteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(catBtnFifthteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(catBtnThirteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(catBtnFourteen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(catBtnOne, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -782,7 +766,7 @@ public class ImatView extends javax.swing.JFrame {
         jScrollPane1.setBorder(null);
 
         oProductPanel.setBackground(new java.awt.Color(245, 245, 245));
-        oProductPanel.setLayout(new java.awt.GridLayout(0, 5, 10, 10));
+        oProductPanel.setLayout(new java.awt.GridLayout(0, 4, 2, 2));
         jScrollPane1.setViewportView(oProductPanel);
 
         javax.swing.GroupLayout productPanelLayout = new javax.swing.GroupLayout(productPanel);
@@ -790,15 +774,15 @@ public class ImatView extends javax.swing.JFrame {
         productPanelLayout.setHorizontalGroup(
             productPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(productPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1737, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(127, 127, 127)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(510, Short.MAX_VALUE))
         );
         productPanelLayout.setVerticalGroup(
             productPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(productPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -942,7 +926,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totalPriceLabel))
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
 
         profileScPanel.add(prevOrderViewPanel, "card4");
@@ -1160,7 +1144,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoSaveBut)
                     .addComponent(infoContShopBut))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
 
         profileScPanel.add(myInfoPanel, "card2");
@@ -1179,7 +1163,7 @@ public class ImatView extends javax.swing.JFrame {
         profilePanelLayout.setVerticalGroup(
             profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(profileNavPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
         );
 
         mainPanel.add(profilePanel, "card4");
@@ -1245,7 +1229,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addComponent(jLabel44)
                 .addGap(18, 18, 18)
                 .addComponent(helpContShop)
-                .addContainerGap(513, Short.MAX_VALUE))
+                .addContainerGap(531, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout helpPanelLayout = new javax.swing.GroupLayout(helpPanel);
@@ -1423,7 +1407,7 @@ public class ImatView extends javax.swing.JFrame {
             .addGroup(basketPanel2Layout.createSequentialGroup()
                 .addComponent(basketTopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(basketBottomPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1452,19 +1436,21 @@ public class ImatView extends javax.swing.JFrame {
             shopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(shopPanelLayout.createSequentialGroup()
                 .addComponent(navPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         mainNavPanel.add(shopPanel, "card2");
 
-        checkOutPanel.setBackground(new java.awt.Color(230, 230, 230));
+        checkOutPanel.setBackground(new java.awt.Color(245, 245, 245));
         checkOutPanel.setLayout(new java.awt.CardLayout());
 
-        seqPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        chkOutBskPanel.setBackground(new java.awt.Color(245, 245, 245));
+
+        seqPanel1.setBackground(new java.awt.Color(225, 225, 225));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 2 copy.gif"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 2 copy.png"))); // NOI18N
 
         javax.swing.GroupLayout seqPanel1Layout = new javax.swing.GroupLayout(seqPanel1);
         seqPanel1.setLayout(seqPanel1Layout);
@@ -1479,13 +1465,13 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        seqBskPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqBskPanel.setBackground(new java.awt.Color(245, 245, 245));
 
-        chkOutbskPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        chkOutbskPanel.setBackground(new java.awt.Color(245, 245, 245));
 
         basketTopPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1511,7 +1497,7 @@ public class ImatView extends javax.swing.JFrame {
         basketTopPanel1Layout.setHorizontalGroup(
             basketTopPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketTopPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(651, Short.MAX_VALUE)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1545,7 +1531,7 @@ public class ImatView extends javax.swing.JFrame {
         basketGridPanel1.setLayout(new java.awt.GridLayout(100, 0));
         basketScrollPane1.setViewportView(basketGridPanel1);
 
-        basketBottomPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        basketBottomPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("   ");
@@ -1565,6 +1551,9 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        chkOutBskNxtBut.setBackground(new java.awt.Color(66, 133, 244));
+        chkOutBskNxtBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        chkOutBskNxtBut.setForeground(new java.awt.Color(245, 245, 245));
         chkOutBskNxtBut.setText("Nästa >>");
         chkOutBskNxtBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1577,7 +1566,7 @@ public class ImatView extends javax.swing.JFrame {
         basketBottomPanel1Layout.setHorizontalGroup(
             basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketBottomPanel1Layout.createSequentialGroup()
-                .addContainerGap(1039, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketBottomPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1601,7 +1590,7 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(jLabel24))
                 .addGap(18, 18, 18)
                 .addComponent(basketContShopBut1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(chkOutBskNxtBut)
                 .addContainerGap())
         );
@@ -1614,9 +1603,9 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(chkOutbskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(basketTopPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(basketBottomPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1689, Short.MAX_VALUE))
+                    .addComponent(basketScrollPane1))
                 .addContainerGap())
+            .addComponent(basketBottomPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         chkOutbskPanelLayout.setVerticalGroup(
             chkOutbskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1624,56 +1613,47 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(basketTopPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketBottomPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(basketBottomPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout seqBskPanelLayout = new javax.swing.GroupLayout(seqBskPanel);
         seqBskPanel.setLayout(seqBskPanelLayout);
         seqBskPanelLayout.setHorizontalGroup(
             seqBskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(seqBskPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(chkOutbskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(chkOutbskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         seqBskPanelLayout.setVerticalGroup(
             seqBskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqBskPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(chkOutbskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(chkOutbskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout chkOutBskPanelLayout = new javax.swing.GroupLayout(chkOutBskPanel);
         chkOutBskPanel.setLayout(chkOutBskPanelLayout);
         chkOutBskPanelLayout.setHorizontalGroup(
             chkOutBskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chkOutBskPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(chkOutBskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(seqPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqBskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(seqBskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(seqPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         chkOutBskPanelLayout.setVerticalGroup(
             chkOutBskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutBskPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(seqPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(seqBskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(seqBskPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         checkOutPanel.add(chkOutBskPanel, "card2");
 
-        seqPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        chkOutAdrPanel.setBackground(new java.awt.Color(245, 245, 245));
+
+        seqPanel2.setBackground(new java.awt.Color(225, 225, 225));
 
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 3 copy.gif"))); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 3 copy.png"))); // NOI18N
 
         javax.swing.GroupLayout seqPanel2Layout = new javax.swing.GroupLayout(seqPanel2);
         seqPanel2.setLayout(seqPanel2Layout);
@@ -1681,14 +1661,14 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1713, Short.MAX_VALUE)
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1737, Short.MAX_VALUE)
                 .addContainerGap())
         );
         seqPanel2Layout.setVerticalGroup(
             seqPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1749,7 +1729,7 @@ public class ImatView extends javax.swing.JFrame {
                         .addComponent(infoPhoneField1)
                         .addComponent(infoMailField1)
                         .addComponent(infoNameField1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1504, Short.MAX_VALUE))
         );
         seqAdrPanelLayout.setVerticalGroup(
             seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1780,11 +1760,14 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoCityField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveAdrChkBox)
-                .addContainerGap(407, Short.MAX_VALUE))
+                .addContainerGap(440, Short.MAX_VALUE))
         );
 
-        seqNavPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqNavPanel2.setBackground(new java.awt.Color(245, 245, 245));
 
+        seq2backBut.setBackground(new java.awt.Color(52, 168, 83));
+        seq2backBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        seq2backBut.setForeground(new java.awt.Color(245, 245, 245));
         seq2backBut.setText("<< Tillbaka");
         seq2backBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1792,6 +1775,9 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        seq2NextBut.setBackground(new java.awt.Color(66, 133, 244));
+        seq2NextBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        seq2NextBut.setForeground(new java.awt.Color(245, 245, 245));
         seq2NextBut.setText("Nästa >>");
         seq2NextBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1813,7 +1799,7 @@ public class ImatView extends javax.swing.JFrame {
         seqNavPanel2Layout.setVerticalGroup(
             seqNavPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqNavPanel2Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(seqNavPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(seq2backBut)
                     .addComponent(seq2NextBut))
@@ -1826,30 +1812,29 @@ public class ImatView extends javax.swing.JFrame {
             chkOutAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutAdrPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(chkOutAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(seqPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqNavPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqAdrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(seqAdrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(seqPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(seqNavPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         chkOutAdrPanelLayout.setVerticalGroup(
             chkOutAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutAdrPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(seqPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(seqAdrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(seqNavPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(seqNavPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         checkOutPanel.add(chkOutAdrPanel, "card3");
 
-        seqPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        chkOutPayPanel.setBackground(new java.awt.Color(245, 245, 245));
+
+        seqPanel3.setBackground(new java.awt.Color(225, 225, 225));
 
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 4 copy.gif"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 4 copy.png"))); // NOI18N
 
         javax.swing.GroupLayout seqPanel3Layout = new javax.swing.GroupLayout(seqPanel3);
         seqPanel3.setLayout(seqPanel3Layout);
@@ -1857,14 +1842,14 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 1713, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         seqPanel3Layout.setVerticalGroup(
             seqPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1933,7 +1918,7 @@ public class ImatView extends javax.swing.JFrame {
                                 .addGap(12, 12, 12)
                                 .addComponent(infoYearCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(infoCrdOwnField1))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1533, Short.MAX_VALUE))
         );
         seqPayPanelLayout.setVerticalGroup(
             seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1961,11 +1946,14 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoYearCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveCrdChkBox)
-                .addContainerGap(438, Short.MAX_VALUE))
+                .addContainerGap(471, Short.MAX_VALUE))
         );
 
-        seqNavPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqNavPanel3.setBackground(new java.awt.Color(245, 245, 245));
 
+        seq3backBut.setBackground(new java.awt.Color(52, 168, 83));
+        seq3backBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        seq3backBut.setForeground(new java.awt.Color(245, 245, 245));
         seq3backBut.setText("<< Tillbaka");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, seq2backBut, org.jdesktop.beansbinding.ELProperty.create("${selected}"), seq3backBut, org.jdesktop.beansbinding.BeanProperty.create("selected"));
@@ -1977,6 +1965,9 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        seq3NextBut.setBackground(new java.awt.Color(66, 133, 244));
+        seq3NextBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        seq3NextBut.setForeground(new java.awt.Color(245, 245, 245));
         seq3NextBut.setText("Nästa >>");
         seq3NextBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1998,7 +1989,7 @@ public class ImatView extends javax.swing.JFrame {
         seqNavPanel3Layout.setVerticalGroup(
             seqNavPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqNavPanel3Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(seqNavPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(seq3backBut)
                     .addComponent(seq3NextBut))
@@ -2009,32 +2000,31 @@ public class ImatView extends javax.swing.JFrame {
         chkOutPayPanel.setLayout(chkOutPayPanelLayout);
         chkOutPayPanelLayout.setHorizontalGroup(
             chkOutPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chkOutPayPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chkOutPayPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(chkOutPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(seqPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqNavPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqPayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(seqPayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(seqPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(seqNavPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         chkOutPayPanelLayout.setVerticalGroup(
             chkOutPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutPayPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(seqPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(seqPayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(seqNavPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(seqNavPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         checkOutPanel.add(chkOutPayPanel, "card4");
 
-        seqPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        chkOutConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
+
+        seqPanel4.setBackground(new java.awt.Color(225, 225, 225));
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 5 copy.gif"))); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/SM 5 copy.png"))); // NOI18N
 
         javax.swing.GroupLayout seqPanel4Layout = new javax.swing.GroupLayout(seqPanel4);
         seqPanel4.setLayout(seqPanel4Layout);
@@ -2042,14 +2032,14 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 1713, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         seqPanel4Layout.setVerticalGroup(
             seqPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2214,7 +2204,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cvcConfirmLabel)
                     .addComponent(jLabel39))
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(305, Short.MAX_VALUE))
         );
 
         basketConfirmPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -2231,7 +2221,7 @@ public class ImatView extends javax.swing.JFrame {
             .addGroup(basketConfirmPanelLayout.createSequentialGroup()
                 .addGap(162, 162, 162)
                 .addComponent(jLabel41)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1245, Short.MAX_VALUE))
             .addGroup(basketConfirmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane3))
@@ -2266,8 +2256,11 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        seqNavPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqNavPanel4.setBackground(new java.awt.Color(245, 245, 245));
 
+        seq4backBut.setBackground(new java.awt.Color(52, 168, 83));
+        seq4backBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        seq4backBut.setForeground(new java.awt.Color(245, 245, 245));
         seq4backBut.setText("<< Tillbaka");
         seq4backBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2275,6 +2268,9 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        confirmBuyBut.setBackground(new java.awt.Color(66, 133, 244));
+        confirmBuyBut.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        confirmBuyBut.setForeground(new java.awt.Color(245, 245, 245));
         confirmBuyBut.setText("SLUTFÖR KÖP");
         confirmBuyBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2296,10 +2292,10 @@ public class ImatView extends javax.swing.JFrame {
         seqNavPanel4Layout.setVerticalGroup(
             seqNavPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqNavPanel4Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(seqNavPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(seq4backBut)
-                    .addComponent(confirmBuyBut))
+                    .addComponent(confirmBuyBut)
+                    .addComponent(seq4backBut))
                 .addContainerGap())
         );
 
@@ -2309,22 +2305,19 @@ public class ImatView extends javax.swing.JFrame {
             chkOutConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutConfirmPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(chkOutConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(seqPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqNavPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(seqConfirmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(seqConfirmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(seqPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(seqNavPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         chkOutConfirmPanelLayout.setVerticalGroup(
             chkOutConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chkOutConfirmPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(seqPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(seqConfirmPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(seqNavPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(seqNavPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         checkOutPanel.add(chkOutConfirmPanel, "card5");
@@ -2367,7 +2360,7 @@ public class ImatView extends javax.swing.JFrame {
     private void catBtnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catBtnOneActionPerformed
         refocus("card3");
         mController.setContentPanel(oProductPanel);
-        mController.populateView(ProductCategory.POD);    
+        mController.populateViewDiscounted();    
         btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_catBtnOneActionPerformed
 
@@ -2412,13 +2405,6 @@ public class ImatView extends javax.swing.JFrame {
         mController.populateViewFavorites();
         btnController.buttonRecolor((JButton) evt.getSource());
     }//GEN-LAST:event_favButtonActionPerformed
-
-    private void discounstButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discounstButtonActionPerformed
-        refocus("card3");
-        mController.setContentPanel(oProductPanel);
-        mController.populateViewDiscounted();
-        btnController.buttonRecolor((JButton) evt.getSource());
-    }//GEN-LAST:event_discounstButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         refocus("card3");
@@ -2682,7 +2668,6 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JTextField cvcField;
     private javax.swing.JLabel cvcLabel;
     private javax.swing.JLabel dateLabel;
-    private javax.swing.JButton discounstButton;
     private javax.swing.JPanel entryPanel;
     private javax.swing.JLabel errorMessageLabel;
     private javax.swing.JButton favButton;
