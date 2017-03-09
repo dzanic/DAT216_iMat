@@ -1322,36 +1322,39 @@
                                       <Layout>
                                         <DimensionLayout dim="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="infoLstNameLabel" min="-2" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" attributes="0">
-                                                                      <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
-                                                                      <Component id="infoMailLabel" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" alignment="1" attributes="0">
-                                                                      <EmptySpace max="-2" attributes="0"/>
-                                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="infoPhoneLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="infoAdrLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="infoZipLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="infoCityLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                                      <Group type="102" attributes="0">
+                                                                          <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
+                                                                          <Component id="infoMailLabel" min="-2" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                      <Group type="102" alignment="1" attributes="0">
+                                                                          <EmptySpace max="-2" attributes="0"/>
+                                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                                              <Component id="infoPhoneLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                              <Component id="infoAdrLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                              <Component id="infoZipLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                              <Component id="infoCityLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                          </Group>
                                                                       </Group>
                                                                   </Group>
+                                                                  <Component id="infoCrdTypeL" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Component id="infoCrdTypeL" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="infoCardNumL" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="infoCardOwnL" alignment="1" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="infoCardNumL" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="infoCardOwnL" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="infoCardValidL" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="infoContShopBut" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="infoFstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Group type="102" alignment="1" attributes="0">
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="infoCardValidL" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="infoContShopBut" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="infoFstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -1375,12 +1378,9 @@
                                                       <Component id="infoCityField" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="infoCrdNumField" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="infoCrdOwnField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="infoLstNameField" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="infoLstNameLabel" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="infoLstNameField" min="-2" pref="200" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="790" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="1072" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
@@ -1390,17 +1390,16 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                          <Component id="infoLstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="infoLstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="infoFstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="infoFstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="infoFstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="infoFstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="infoLstNameLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="infoLstNameField" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="infoMailField" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="infoMailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1452,7 +1451,7 @@
                                                       <Component id="infoSaveBut" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="infoContShopBut" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="366" max="32767" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
