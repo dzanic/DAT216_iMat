@@ -634,24 +634,17 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                                  <Component id="catBtnThree" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                                                  <Component id="catBtnTwo" min="-2" pref="40" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                              <Component id="catBtnThree" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                                              <Component id="catBtnTwo" min="-2" pref="40" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="catBtnEleven" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                                      <Component id="catBtnFour" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                                                                      <Component id="catBtnFive" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                                          <Component id="catBtnEleven" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="3" attributes="0">
+                                                              <Component id="catBtnFour" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                                              <Component id="catBtnFive" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
+                                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Component id="catBtnTwentyOne" min="-2" pref="40" max="-2" attributes="0"/>
                                                           <Component id="catBtnTwelve" min="-2" pref="40" max="-2" attributes="0"/>
@@ -1358,7 +1351,7 @@
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Component id="infoCardValidL" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               <Component id="infoContShopBut" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="infoNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="infoFstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -1375,7 +1368,7 @@
                                                           <Component id="infoYearCombo" min="-2" pref="52" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Component id="infoSaveBut" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="infoNameField" alignment="0" pref="178" max="32767" attributes="0"/>
+                                                      <Component id="infoFstNameField" alignment="0" pref="178" max="32767" attributes="0"/>
                                                       <Component id="infoMailField" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="infoPhoneField" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="infoAdrField" alignment="0" max="32767" attributes="0"/>
@@ -1383,7 +1376,11 @@
                                                       <Component id="infoCrdNumField" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="infoCrdOwnField" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="1072" max="32767" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="infoLstNameLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="infoLstNameField" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <EmptySpace pref="790" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
@@ -1393,9 +1390,15 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="infoNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="infoNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                                          <Component id="infoLstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="infoLstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="103" groupAlignment="3" attributes="0">
+                                                          <Component id="infoFstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="infoFstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1455,7 +1458,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="infoNameLabel">
+                                        <Component class="javax.swing.JLabel" name="infoFstNameLabel">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="SansSerif" size="12" style="0"/>
@@ -1463,7 +1466,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="21" green="21" red="21" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Namn:"/>
+                                            <Property name="text" type="java.lang.String" value="F&#xf6;rnamn:"/>
                                           </Properties>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="infoMailLabel">
@@ -1565,7 +1568,7 @@
                                             <Property name="text" type="java.lang.String" value="Giltigt t.o.m.:"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JTextField" name="infoNameField">
+                                        <Component class="javax.swing.JTextField" name="infoFstNameField">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="SansSerif" size="12" style="0"/>
@@ -1575,7 +1578,7 @@
                                             </Property>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoNameFieldActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoFstNameFieldActionPerformed"/>
                                           </Events>
                                         </Component>
                                         <Component class="javax.swing.JTextField" name="infoMailField">
@@ -1782,6 +1785,30 @@
                                               <Color blue="21" green="21" red="21" type="rgb"/>
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="Uppgifter"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JTextField" name="infoLstNameField">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="SansSerif" size="12" style="0"/>
+                                            </Property>
+                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                              <Color blue="21" green="21" red="21" type="rgb"/>
+                                            </Property>
+                                          </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoLstNameFieldActionPerformed"/>
+                                          </Events>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="infoLstNameLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="SansSerif" size="12" style="0"/>
+                                            </Property>
+                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                              <Color blue="21" green="21" red="21" type="rgb"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Efternamn:"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -2404,7 +2431,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketTopPanel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="basketScrollPane1" pref="483" max="32767" attributes="0"/>
+                                          <Component id="basketScrollPane1" pref="476" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="basketBottomPanel1" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -2414,10 +2441,8 @@
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="basketTopPanel1">
                                   <Properties>
-                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                        <BevelBorder/>
-                                      </Border>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
                                     </Property>
                                   </Properties>
 
@@ -2425,20 +2450,20 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="651" max="32767" attributes="0"/>
-                                              <Component id="jLabel20" min="-2" pref="200" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jLabel19" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jLabel20" min="-2" pref="165" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jLabel19" min="-2" pref="99" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jLabel18" min="-2" pref="200" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jLabel17" min="-2" pref="200" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jLabel16" min="-2" pref="200" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                                               <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2465,46 +2490,74 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="jLabel16">
                                       <Properties>
-                                        <Property name="horizontalAlignment" type="int" value="0"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="12" style="0"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
                                         <Property name="text" type="java.lang.String" value="Ta bort"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel17">
                                       <Properties>
-                                        <Property name="horizontalAlignment" type="int" value="0"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="12" style="0"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
                                         <Property name="text" type="java.lang.String" value="Pris"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel18">
                                       <Properties>
-                                        <Property name="horizontalAlignment" type="int" value="0"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="12" style="0"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
                                         <Property name="text" type="java.lang.String" value="&#xe1; pris"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel19">
                                       <Properties>
-                                        <Property name="horizontalAlignment" type="int" value="0"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="12" style="0"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
                                         <Property name="text" type="java.lang.String" value="Antal"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel20">
                                       <Properties>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="12" style="0"/>
+                                        </Property>
                                         <Property name="horizontalAlignment" type="int" value="0"/>
                                         <Property name="text" type="java.lang.String" value="Vara"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel21">
                                       <Properties>
-                                        <Property name="text" type="java.lang.String" value="Varukorg"/>
+                                        <Property name="text" type="java.lang.String" value="  "/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JScrollPane" name="basketScrollPane1">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="null"/>
+                                    </Property>
+                                  </Properties>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
                                     <Container class="javax.swing.JPanel" name="basketGridPanel1">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                        </Property>
+                                      </Properties>
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                                         <Property name="columns" type="int" value="0"/>
@@ -2524,21 +2577,19 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <EmptySpace max="32767" attributes="0"/>
+                                              <EmptySpace pref="1111" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel24" min="-2" pref="200" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="basketTotPriceLab1" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="jLabel23" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Component id="basketContShopBut1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
                                                   <Component id="chkOutBskNxtBut" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel24" min="-2" pref="200" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="basketTotPriceLab1" min="-2" pref="200" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jLabel23" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2553,9 +2604,9 @@
                                                   <Component id="basketTotPriceLab1" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="17" max="32767" attributes="0"/>
+                                              <EmptySpace pref="24" max="32767" attributes="0"/>
                                               <Component id="chkOutBskNxtBut" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2571,7 +2622,10 @@
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="basketTotPriceLab1">
                                       <Properties>
-                                        <Property name="horizontalAlignment" type="int" value="0"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="14" style="1"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
                                       </Properties>
                                       <BindingProperties>
                                         <BindingProperty name="text" source="basketTotPriceLab" sourcePath="${text}" target="basketTotPriceLab1" targetPath="text" updateStrategy="0" immediately="false"/>
@@ -2579,12 +2633,24 @@
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel24">
                                       <Properties>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="14" style="1"/>
+                                        </Property>
                                         <Property name="horizontalAlignment" type="int" value="4"/>
                                         <Property name="text" type="java.lang.String" value="Totalt:"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="basketContShopBut1">
                                       <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="53" green="a8" red="34" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="SansSerif" size="14" style="1"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Forts&#xe4;tt handla"/>
                                       </Properties>
                                       <Events>
@@ -2693,10 +2759,8 @@
                         </Container>
                         <Container class="javax.swing.JPanel" name="seqAdrPanel">
                           <Properties>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                <BevelBorder/>
-                              </Border>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="f5" green="f5" red="f5" type="rgb"/>
                             </Property>
                           </Properties>
 
@@ -2704,7 +2768,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="383" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="infoPhoneLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="infoNameLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -2716,23 +2780,23 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="saveAdrChkBox" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="infoZipField1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="infoCityField1" alignment="0" pref="108" max="32767" attributes="0"/>
+                                              <Component id="infoCityField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="infoAdrField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="infoPhoneField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="infoMailField1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="infoNameField1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="infoNameField1" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="1504" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="infoNameLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="infoNameField1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2764,7 +2828,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="saveAdrChkBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="440" max="32767" attributes="0"/>
+                                      <EmptySpace pref="383" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2772,42 +2836,70 @@
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="infoNameLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Namn:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoMailLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="E-post:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoPhoneLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Telefonnummer:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoAdrLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Adress:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoZipLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Postnummer:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoCityLabel1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Ort:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoNameField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
-                                <BindingProperty name="text" source="infoNameField" sourcePath="${text}" target="infoNameField1" targetPath="text" updateStrategy="0" immediately="false">
+                                <BindingProperty name="text" source="infoFstNameField" sourcePath="${text}" target="infoNameField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
                                 </BindingProperty>
                               </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoMailField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoMailField" sourcePath="${text}" target="infoMailField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -2815,6 +2907,11 @@
                               </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoPhoneField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoPhoneField" sourcePath="${text}" target="infoPhoneField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -2822,6 +2919,11 @@
                               </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoAdrField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoAdrField" sourcePath="${text}" target="infoAdrField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -2829,6 +2931,11 @@
                               </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoZipField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoZipField" sourcePath="${text}" target="infoZipField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -2836,6 +2943,11 @@
                               </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoCityField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoCityField" sourcePath="${text}" target="infoCityField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -2844,6 +2956,9 @@
                             </Component>
                             <Component class="javax.swing.JCheckBox" name="saveAdrChkBox">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Spara uppgifter"/>
                               </Properties>
                             </Component>
@@ -2969,7 +3084,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel26" max="32767" attributes="0"/>
+                                      <Component id="jLabel26" pref="1737" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2997,20 +3112,19 @@
                         </Container>
                         <Container class="javax.swing.JPanel" name="seqPayPanel">
                           <Properties>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                <BevelBorder/>
-                              </Border>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="f5" green="f5" red="f5" type="rgb"/>
                             </Property>
                           </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="641" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="cvcLabel" min="-2" max="-2" attributes="0"/>
                                                   <Component id="infoCrdTypeL1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -3024,7 +3138,6 @@
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="infoCardOwnL1" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="infoCardValidL1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -3032,23 +3145,23 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="saveCrdChkBox" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
                                                       <Component id="infoMonthCombo1" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                                                       <Component id="infoYearCombo1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="infoCrdOwnField1" max="32767" attributes="0"/>
+                                                  <Component id="infoCrdOwnField1" min="-2" pref="108" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="1533" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="infoCrdTypeL1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="infoCardCombo1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3076,7 +3189,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="saveCrdChkBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="471" max="32767" attributes="0"/>
+                                      <EmptySpace pref="416" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -3084,11 +3197,17 @@
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="infoCrdTypeL1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Kontokort:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="infoCardCombo1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="3">
                                     <StringItem index="0" value="V&#xe4;lj korttyp"/>
@@ -3106,10 +3225,18 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoCardNumL1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Kortnummer:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoCrdNumField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoCrdNumField" sourcePath="${text}" target="infoCrdNumField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -3118,10 +3245,18 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoCardOwnL1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Kortinnehavare:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoCrdOwnField1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                               <BindingProperties>
                                 <BindingProperty name="text" source="infoCrdOwnField" sourcePath="${text}" target="infoCrdOwnField1" targetPath="text" updateStrategy="0" immediately="false">
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
@@ -3130,11 +3265,17 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoCardValidL1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Giltigt t.o.m.:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="infoMonthCombo1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="13">
                                     <StringItem index="0" value="MM"/>
@@ -3162,6 +3303,9 @@
                             </Component>
                             <Component class="javax.swing.JComboBox" name="infoYearCombo1">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="13">
                                     <StringItem index="0" value="&#xc5;&#xc5;"/>
@@ -3189,13 +3333,24 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="cvcLabel">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="CVC:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="cvcField">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                              </Properties>
                             </Component>
                             <Component class="javax.swing.JCheckBox" name="saveCrdChkBox">
                               <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
                                 <Property name="text" type="java.lang.String" value="Spara uppgifter"/>
                               </Properties>
                             </Component>
@@ -3352,10 +3507,8 @@
                         </Container>
                         <Container class="javax.swing.JPanel" name="seqConfirmPanel">
                           <Properties>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                <BevelBorder/>
-                              </Border>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="f5" green="f5" red="f5" type="rgb"/>
                             </Property>
                           </Properties>
 
@@ -3387,10 +3540,8 @@
                           <SubComponents>
                             <Container class="javax.swing.JPanel" name="infoConfirmPanel">
                               <Properties>
-                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                    <BevelBorder/>
-                                  </Border>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f5" green="f5" red="f5" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -3508,7 +3659,7 @@
                                               <Component id="cvcConfirmLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="305" max="32767" attributes="0"/>
+                                          <EmptySpace pref="286" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -3516,137 +3667,309 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="infoNameLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Namn:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoMailLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="E-post:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoPhoneLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Telefonnummer:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoAdrLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Adress:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoZipLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Postnummer:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoCityLabel2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Ort:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoCrdTypeL2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Kontokort:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoCardNumL2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Kortnummer:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoCardOwnL2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Kortinnehavare:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoCardValidL2">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="Giltigt t.o.m.:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoSlashLabel1">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="/"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="cvcConfirmLabel">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="CVC:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel28">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
-                                    <BindingProperty name="text" source="infoNameField" sourcePath="${text}" target="jLabel28" targetPath="text" updateStrategy="0" immediately="false"/>
+                                    <BindingProperty name="text" source="infoFstNameField" sourcePath="${text}" target="jLabel28" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel29">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoMailField" sourcePath="${text}" target="jLabel29" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel30">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoPhoneField" sourcePath="${text}" target="jLabel30" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel31">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoAdrField" sourcePath="${text}" target="jLabel31" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel32">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoZipField" sourcePath="${text}" target="jLabel32" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel33">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoCityField" sourcePath="${text}" target="jLabel33" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel34">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoCardCombo" sourcePath="${selectedItem}" target="jLabel34" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel35">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoCrdNumField" sourcePath="${text}" target="jLabel35" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel36">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoCrdOwnField" sourcePath="${text}" target="jLabel36" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel37">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoMonthCombo" sourcePath="${selectedItem}" target="jLabel37" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel38">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="infoYearCombo" sourcePath="${selectedItem}" target="jLabel38" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel39">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                  </Properties>
                                   <BindingProperties>
                                     <BindingProperty name="text" source="cvcField" sourcePath="${text}" target="jLabel39" targetPath="text" updateStrategy="0" immediately="false"/>
                                   </BindingProperties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel40">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" value="Dina uppgifter: (hur visa?)"/>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="14" style="1"/>
+                                    </Property>
+                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="21" green="21" red="21" type="rgb"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Dina uppgifter:"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="basketConfirmPanel">
                               <Properties>
-                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                                    <BevelBorder/>
-                                  </Border>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f5" green="f5" red="f5" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -3656,7 +3979,7 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                                           <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="1245" max="32767" attributes="0"/>
+                                          <EmptySpace pref="1237" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
@@ -3678,14 +4001,31 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel41">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" value="Din varukorg:"/>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="14" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Din varor:"/>
                                   </Properties>
                                 </Component>
                                 <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                    </Property>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="null"/>
+                                    </Property>
+                                  </Properties>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
                                     <Container class="javax.swing.JPanel" name="finalBasketPanel">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                                        </Property>
+                                        <Property name="doubleBuffered" type="boolean" value="false"/>
+                                      </Properties>
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                                         <Property name="columns" type="int" value="0"/>

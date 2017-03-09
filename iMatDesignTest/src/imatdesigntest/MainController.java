@@ -320,10 +320,12 @@ public class MainController implements CardViewController, ItemPanelController,
     }
     public void confirmOrder(){
             IMatDataHandler.getInstance().placeOrder(true);
+            System.out.println("I came here! Ordered stuff");
             generateReceipt();
             checkSave();
             flush();
-        
+       IMatDataHandler.getInstance().getOrders().clear();
+       IMatDataHandler.getInstance().shutDown();
     }
 
 

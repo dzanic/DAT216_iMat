@@ -25,7 +25,7 @@ public class ImatView extends javax.swing.JFrame {
     public ImatView() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
-        mController = new MainController(infoNameField,
+        mController = new MainController(infoFstNameField,
                             infoMailField,
                             infoPhoneField,
                             infoAdrField,
@@ -121,7 +121,7 @@ public class ImatView extends javax.swing.JFrame {
         totalPriceLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         myInfoPanel = new javax.swing.JPanel();
-        infoNameLabel = new javax.swing.JLabel();
+        infoFstNameLabel = new javax.swing.JLabel();
         infoMailLabel = new javax.swing.JLabel();
         infoPhoneLabel = new javax.swing.JLabel();
         infoAdrLabel = new javax.swing.JLabel();
@@ -131,7 +131,7 @@ public class ImatView extends javax.swing.JFrame {
         infoCardNumL = new javax.swing.JLabel();
         infoCardOwnL = new javax.swing.JLabel();
         infoCardValidL = new javax.swing.JLabel();
-        infoNameField = new javax.swing.JTextField();
+        infoFstNameField = new javax.swing.JTextField();
         infoMailField = new javax.swing.JTextField();
         infoPhoneField = new javax.swing.JTextField();
         infoAdrField = new javax.swing.JTextField();
@@ -146,6 +146,8 @@ public class ImatView extends javax.swing.JFrame {
         infoContShopBut = new javax.swing.JButton();
         infoSaveBut = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
+        infoLstNameField = new javax.swing.JTextField();
+        infoLstNameLabel = new javax.swing.JLabel();
         helpPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -733,18 +735,14 @@ public class ImatView extends javax.swing.JFrame {
                             .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(navPanelLayout.createSequentialGroup()
                                     .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(navPanelLayout.createSequentialGroup()
-                                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(catBtnThree, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(catBtnTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(11, 11, 11))
-                                        .addGroup(navPanelLayout.createSequentialGroup()
-                                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(catBtnEleven, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                    .addComponent(catBtnFour, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(catBtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGap(11, 11, 11)))
+                                        .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(catBtnThree, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(catBtnTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(catBtnEleven, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(catBtnFour, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(catBtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(11, 11, 11)
                                     .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(catBtnTwentyOne, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(catBtnTwelve, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -935,9 +933,9 @@ public class ImatView extends javax.swing.JFrame {
         myInfoPanel.setMaximumSize(new java.awt.Dimension(600, 600));
         myInfoPanel.setPreferredSize(new java.awt.Dimension(600, 600));
 
-        infoNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        infoNameLabel.setForeground(new java.awt.Color(33, 33, 33));
-        infoNameLabel.setText("Namn:");
+        infoFstNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        infoFstNameLabel.setForeground(new java.awt.Color(33, 33, 33));
+        infoFstNameLabel.setText("Förnamn:");
 
         infoMailLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoMailLabel.setForeground(new java.awt.Color(33, 33, 33));
@@ -975,11 +973,11 @@ public class ImatView extends javax.swing.JFrame {
         infoCardValidL.setForeground(new java.awt.Color(33, 33, 33));
         infoCardValidL.setText("Giltigt t.o.m.:");
 
-        infoNameField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        infoNameField.setForeground(new java.awt.Color(33, 33, 33));
-        infoNameField.addActionListener(new java.awt.event.ActionListener() {
+        infoFstNameField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        infoFstNameField.setForeground(new java.awt.Color(33, 33, 33));
+        infoFstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                infoNameFieldActionPerformed(evt);
+                infoFstNameFieldActionPerformed(evt);
             }
         });
 
@@ -1044,6 +1042,18 @@ public class ImatView extends javax.swing.JFrame {
         jLabel45.setForeground(new java.awt.Color(33, 33, 33));
         jLabel45.setText("Uppgifter");
 
+        infoLstNameField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        infoLstNameField.setForeground(new java.awt.Color(33, 33, 33));
+        infoLstNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoLstNameFieldActionPerformed(evt);
+            }
+        });
+
+        infoLstNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        infoLstNameLabel.setForeground(new java.awt.Color(33, 33, 33));
+        infoLstNameLabel.setText("Efternamn:");
+
         javax.swing.GroupLayout myInfoPanelLayout = new javax.swing.GroupLayout(myInfoPanel);
         myInfoPanel.setLayout(myInfoPanelLayout);
         myInfoPanelLayout.setHorizontalGroup(
@@ -1071,7 +1081,7 @@ public class ImatView extends javax.swing.JFrame {
                         .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(infoCardValidL, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(infoContShopBut, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(infoNameLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(infoFstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel45)
@@ -1084,14 +1094,18 @@ public class ImatView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(infoYearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(infoSaveBut)
-                    .addComponent(infoNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(infoFstNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                     .addComponent(infoMailField)
                     .addComponent(infoPhoneField)
                     .addComponent(infoAdrField)
                     .addComponent(infoCityField)
                     .addComponent(infoCrdNumField)
                     .addComponent(infoCrdOwnField))
-                .addContainerGap(1072, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(infoLstNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(infoLstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(790, Short.MAX_VALUE))
         );
         myInfoPanelLayout.setVerticalGroup(
             myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1099,9 +1113,13 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel45)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(infoNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(infoNameLabel))
+                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(infoLstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(infoLstNameLabel))
+                    .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(infoFstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(infoFstNameLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoMailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1473,43 +1491,48 @@ public class ImatView extends javax.swing.JFrame {
 
         chkOutbskPanel.setBackground(new java.awt.Color(245, 245, 245));
 
-        basketTopPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        basketTopPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel16.setText("Ta bort");
 
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel17.setText("Pris");
 
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel18.setText("á pris");
 
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel19.setText("Antal");
 
+        jLabel20.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("Vara");
 
-        jLabel21.setText("Varukorg");
+        jLabel21.setText("  ");
 
         javax.swing.GroupLayout basketTopPanel1Layout = new javax.swing.GroupLayout(basketTopPanel1);
         basketTopPanel1.setLayout(basketTopPanel1Layout);
         basketTopPanel1Layout.setHorizontalGroup(
             basketTopPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketTopPanel1Layout.createSequentialGroup()
-                .addContainerGap(651, Short.MAX_VALUE)
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(154, 154, 154))
             .addGroup(basketTopPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(121, 121, 121)
                 .addComponent(jLabel21)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1528,6 +1551,10 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        basketScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
+        basketScrollPane1.setBorder(null);
+
+        basketGridPanel1.setBackground(new java.awt.Color(245, 245, 245));
         basketGridPanel1.setLayout(new java.awt.GridLayout(100, 0));
         basketScrollPane1.setViewportView(basketGridPanel1);
 
@@ -1536,14 +1563,19 @@ public class ImatView extends javax.swing.JFrame {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("   ");
 
-        basketTotPriceLab1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        basketTotPriceLab1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        basketTotPriceLab1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, basketTotPriceLab, org.jdesktop.beansbinding.ELProperty.create("${text}"), basketTotPriceLab1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel24.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel24.setText("Totalt:");
 
+        basketContShopBut1.setBackground(new java.awt.Color(52, 168, 83));
+        basketContShopBut1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        basketContShopBut1.setForeground(new java.awt.Color(245, 245, 245));
         basketContShopBut1.setText("Fortsätt handla");
         basketContShopBut1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1566,18 +1598,17 @@ public class ImatView extends javax.swing.JFrame {
         basketBottomPanel1Layout.setHorizontalGroup(
             basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketBottomPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(1111, Short.MAX_VALUE)
                 .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkOutBskNxtBut, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketBottomPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(basketContShopBut1)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(basketBottomPanel1Layout.createSequentialGroup()
-                                .addComponent(basketTotPriceLab1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(basketContShopBut1)))
-                    .addComponent(chkOutBskNxtBut, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(basketTotPriceLab1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         basketBottomPanel1Layout.setVerticalGroup(
@@ -1588,9 +1619,9 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(jLabel23)
                     .addComponent(basketTotPriceLab1)
                     .addComponent(jLabel24))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(basketContShopBut1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(chkOutBskNxtBut)
                 .addContainerGap())
         );
@@ -1613,7 +1644,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(basketTopPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(basketBottomPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1672,38 +1703,57 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        seqAdrPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqAdrPanel.setBackground(new java.awt.Color(245, 245, 245));
 
+        infoNameLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoNameLabel1.setText("Namn:");
 
+        infoMailLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoMailLabel1.setText("E-post:");
 
+        infoPhoneLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoPhoneLabel1.setText("Telefonnummer:");
 
+        infoAdrLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoAdrLabel1.setText("Adress:");
 
+        infoZipLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoZipLabel1.setText("Postnummer:");
 
+        infoCityLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCityLabel1.setText("Ort:");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoNameField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoNameField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        infoNameField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoFstNameField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoNameField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        infoMailField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoMailField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoMailField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        infoPhoneField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoPhoneField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoPhoneField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        infoAdrField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoAdrField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoAdrField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        infoZipField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoZipField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoZipField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        infoCityField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCityField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoCityField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        saveAdrChkBox.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         saveAdrChkBox.setText("Spara uppgifter");
 
         javax.swing.GroupLayout seqAdrPanelLayout = new javax.swing.GroupLayout(seqAdrPanel);
@@ -1711,7 +1761,7 @@ public class ImatView extends javax.swing.JFrame {
         seqAdrPanelLayout.setHorizontalGroup(
             seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqAdrPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(383, 383, 383)
                 .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(infoPhoneLabel1)
                     .addComponent(infoNameLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1724,17 +1774,17 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(saveAdrChkBox)
                     .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(infoZipField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(infoCityField1, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                        .addComponent(infoCityField1)
                         .addComponent(infoAdrField1)
                         .addComponent(infoPhoneField1)
                         .addComponent(infoMailField1)
-                        .addComponent(infoNameField1)))
-                .addContainerGap(1504, Short.MAX_VALUE))
+                        .addComponent(infoNameField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         seqAdrPanelLayout.setVerticalGroup(
             seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqAdrPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(58, 58, 58)
                 .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoNameLabel1)
                     .addComponent(infoNameField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1760,7 +1810,7 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoCityField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveAdrChkBox)
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addContainerGap(383, Short.MAX_VALUE))
         );
 
         seqNavPanel2.setBackground(new java.awt.Color(245, 245, 245));
@@ -1842,7 +1892,7 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 1737, Short.MAX_VALUE)
                 .addContainerGap())
         );
         seqPanel3Layout.setVerticalGroup(
@@ -1853,39 +1903,54 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        seqPayPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqPayPanel.setBackground(new java.awt.Color(245, 245, 245));
 
+        infoCrdTypeL1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCrdTypeL1.setText("Kontokort:");
 
+        infoCardCombo1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Välj korttyp", "VISA", "MasterCard" }));
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCardCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), infoCardCombo1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        infoCardNumL1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardNumL1.setText("Kortnummer:");
+
+        infoCrdNumField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCrdNumField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoCrdNumField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        infoCardOwnL1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardOwnL1.setText("Kortinnehavare:");
+
+        infoCrdOwnField1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCrdOwnField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoCrdOwnField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        infoCardValidL1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardValidL1.setText("Giltigt t.o.m.:");
 
+        infoMonthCombo1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoMonthCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MM", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoMonthCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), infoMonthCombo1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        infoYearCombo1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoYearCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ÅÅ", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" }));
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoYearCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), infoYearCombo1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        cvcLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         cvcLabel.setText("CVC:");
 
+        cvcField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
+        saveCrdChkBox.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         saveCrdChkBox.setText("Spara uppgifter");
 
         javax.swing.GroupLayout seqPayPanelLayout = new javax.swing.GroupLayout(seqPayPanel);
@@ -1893,9 +1958,10 @@ public class ImatView extends javax.swing.JFrame {
         seqPayPanelLayout.setHorizontalGroup(
             seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPayPanelLayout.createSequentialGroup()
+                .addGap(641, 641, 641)
                 .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(seqPayPanelLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addGap(16, 16, 16)
                         .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(cvcLabel)
                             .addComponent(infoCrdTypeL1)
@@ -1906,7 +1972,6 @@ public class ImatView extends javax.swing.JFrame {
                             .addComponent(infoCardCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cvcField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(seqPayPanelLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(infoCardOwnL1)
                             .addComponent(infoCardValidL1, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -1917,13 +1982,13 @@ public class ImatView extends javax.swing.JFrame {
                                 .addComponent(infoMonthCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
                                 .addComponent(infoYearCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(infoCrdOwnField1))))
-                .addContainerGap(1533, Short.MAX_VALUE))
+                            .addComponent(infoCrdOwnField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         seqPayPanelLayout.setVerticalGroup(
             seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPayPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(58, 58, 58)
                 .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoCrdTypeL1)
                     .addComponent(infoCardCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1946,7 +2011,7 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoYearCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveCrdChkBox)
-                .addContainerGap(471, Short.MAX_VALUE))
+                .addContainerGap(416, Short.MAX_VALUE))
         );
 
         seqNavPanel3.setBackground(new java.awt.Color(245, 245, 245));
@@ -2043,71 +2108,133 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        seqConfirmPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        seqConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
 
-        infoConfirmPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        infoConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
 
+        infoNameLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoNameLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoNameLabel2.setText("Namn:");
 
+        infoMailLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoMailLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoMailLabel2.setText("E-post:");
 
+        infoPhoneLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoPhoneLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoPhoneLabel2.setText("Telefonnummer:");
 
+        infoAdrLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoAdrLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoAdrLabel2.setText("Adress:");
 
+        infoZipLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoZipLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoZipLabel2.setText("Postnummer:");
 
+        infoCityLabel2.setBackground(new java.awt.Color(245, 245, 245));
+        infoCityLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCityLabel2.setText("Ort:");
 
+        infoCrdTypeL2.setBackground(new java.awt.Color(245, 245, 245));
+        infoCrdTypeL2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCrdTypeL2.setText("Kontokort:");
 
+        infoCardNumL2.setBackground(new java.awt.Color(245, 245, 245));
+        infoCardNumL2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardNumL2.setText("Kortnummer:");
 
+        infoCardOwnL2.setBackground(new java.awt.Color(245, 245, 245));
+        infoCardOwnL2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardOwnL2.setText("Kortinnehavare:");
 
+        infoCardValidL2.setBackground(new java.awt.Color(245, 245, 245));
+        infoCardValidL2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoCardValidL2.setText("Giltigt t.o.m.:");
 
+        infoSlashLabel1.setBackground(new java.awt.Color(245, 245, 245));
+        infoSlashLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoSlashLabel1.setText("/");
 
+        cvcConfirmLabel.setBackground(new java.awt.Color(245, 245, 245));
+        cvcConfirmLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         cvcConfirmLabel.setText("CVC:");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoNameField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel28, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        jLabel28.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel28.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoFstNameField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel28, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel29.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel29.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoMailField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel29, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel30.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel30.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoPhoneField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel30, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel31.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel31.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoAdrField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel31, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel32.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel32.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoZipField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel32, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel33.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel33.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCityField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel33, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel34.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel34.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCardCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), jLabel34, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel35.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel35.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCrdNumField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel35, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel36.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel36.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCrdOwnField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel36, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel37.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel37.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoMonthCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), jLabel37, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel38.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel38.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoYearCombo, org.jdesktop.beansbinding.ELProperty.create("${selectedItem}"), jLabel38, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
+
+        jLabel39.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel39.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cvcField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel39, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
-        jLabel40.setText("Dina uppgifter: (hur visa?)");
+        jLabel40.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel40.setText("Dina uppgifter:");
 
         javax.swing.GroupLayout infoConfirmPanelLayout = new javax.swing.GroupLayout(infoConfirmPanel);
         infoConfirmPanel.setLayout(infoConfirmPanelLayout);
@@ -2204,13 +2331,19 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cvcConfirmLabel)
                     .addComponent(jLabel39))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(286, Short.MAX_VALUE))
         );
 
-        basketConfirmPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        basketConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
 
-        jLabel41.setText("Din varukorg:");
+        jLabel41.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel41.setText("Din varor:");
 
+        jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
+        jScrollPane3.setBorder(null);
+
+        finalBasketPanel.setBackground(new java.awt.Color(245, 245, 245));
+        finalBasketPanel.setDoubleBuffered(false);
         finalBasketPanel.setLayout(new java.awt.GridLayout(100, 0));
         jScrollPane3.setViewportView(finalBasketPanel);
 
@@ -2221,7 +2354,7 @@ public class ImatView extends javax.swing.JFrame {
             .addGroup(basketConfirmPanelLayout.createSequentialGroup()
                 .addGap(162, 162, 162)
                 .addComponent(jLabel41)
-                .addContainerGap(1245, Short.MAX_VALUE))
+                .addContainerGap(1237, Short.MAX_VALUE))
             .addGroup(basketConfirmPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane3))
@@ -2611,9 +2744,13 @@ public class ImatView extends javax.swing.JFrame {
        mController.specCard("card3");
     }//GEN-LAST:event_infoContShopButActionPerformed
 
-    private void infoNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoNameFieldActionPerformed
+    private void infoFstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoFstNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_infoNameFieldActionPerformed
+    }//GEN-LAST:event_infoFstNameFieldActionPerformed
+
+    private void infoLstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoLstNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_infoLstNameFieldActionPerformed
 
     //Helper method, cuts the amount of code in the
     //category buttons with around 2/3's
@@ -2705,6 +2842,10 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JLabel infoCrdTypeL;
     private javax.swing.JLabel infoCrdTypeL1;
     private javax.swing.JLabel infoCrdTypeL2;
+    private javax.swing.JTextField infoFstNameField;
+    private javax.swing.JLabel infoFstNameLabel;
+    private javax.swing.JTextField infoLstNameField;
+    private javax.swing.JLabel infoLstNameLabel;
     private javax.swing.JTextField infoMailField;
     private javax.swing.JTextField infoMailField1;
     private javax.swing.JLabel infoMailLabel;
@@ -2712,9 +2853,7 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JLabel infoMailLabel2;
     private javax.swing.JComboBox<String> infoMonthCombo;
     private javax.swing.JComboBox<String> infoMonthCombo1;
-    private javax.swing.JTextField infoNameField;
     private javax.swing.JTextField infoNameField1;
-    private javax.swing.JLabel infoNameLabel;
     private javax.swing.JLabel infoNameLabel1;
     private javax.swing.JLabel infoNameLabel2;
     private javax.swing.JTextField infoPhoneField;

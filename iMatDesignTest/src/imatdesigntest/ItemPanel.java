@@ -238,7 +238,8 @@ public class ItemPanel extends javax.swing.JPanel {
             .addComponent(jSeparator2)
         );
 
-        addToCartButton.setBackground(new java.awt.Color(0, 153, 0));
+        addToCartButton.setBackground(new java.awt.Color(52, 168, 83));
+        addToCartButton.setForeground(new java.awt.Color(245, 245, 245));
         addToCartButton.setText("Lägg till");
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
