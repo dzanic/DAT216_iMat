@@ -273,14 +273,20 @@ public class ImatView extends javax.swing.JFrame {
         seq4backBut = new javax.swing.JButton();
         confirmBuyBut = new javax.swing.JButton();
 
-        receiptDialog.setBackground(new java.awt.Color(153, 153, 153));
+        receiptDialog.setBackground(new java.awt.Color(255, 255, 0));
+        receiptDialog.setMinimumSize(new java.awt.Dimension(543, 84));
         receiptDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
         receiptDialog.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
         receiptDialog.setType(java.awt.Window.Type.UTILITY);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Köpet har slutförts!");
 
+        jLabel13.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Varorna är preliminärt bokade att anlända DD/MM/YY - HH/MM/SS");
 
         javax.swing.GroupLayout receiptDialogLayout = new javax.swing.GroupLayout(receiptDialog.getContentPane());
@@ -289,30 +295,30 @@ public class ImatView extends javax.swing.JFrame {
             receiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(receiptDialogLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(receiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(receiptDialogLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
         );
         receiptDialogLayout.setVerticalGroup(
             receiptDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(receiptDialogLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         profileSavedDialog.setUndecorated(true);
         profileSavedDialog.setType(java.awt.Window.Type.UTILITY);
 
-        jPanel5.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel5.setBackground(new java.awt.Color(52, 168, 83));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel46.setBackground(new java.awt.Color(222, 222, 121));
+        jLabel46.setBackground(new java.awt.Color(52, 168, 83));
+        jLabel46.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(245, 245, 245));
         jLabel46.setText("Dina uppgifter har sparats!");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -346,10 +352,13 @@ public class ImatView extends javax.swing.JFrame {
         cannotSaveDialog.setUndecorated(true);
         cannotSaveDialog.setType(java.awt.Window.Type.UTILITY);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBackground(new java.awt.Color(234, 67, 53));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         errorMessageLabel.setBackground(new java.awt.Color(153, 102, 0));
+        errorMessageLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        errorMessageLabel.setForeground(new java.awt.Color(245, 245, 245));
+        errorMessageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         errorMessageLabel.setText("Append text..");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);

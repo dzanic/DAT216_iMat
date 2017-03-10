@@ -117,14 +117,18 @@ public class ItemPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        addedDialog.setMinimumSize(new java.awt.Dimension(202, 40));
         addedDialog.setUndecorated(true);
         addedDialog.setType(java.awt.Window.Type.UTILITY);
 
-        jPanel5.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel5.setBackground(new java.awt.Color(52, 168, 83));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setBackground(new java.awt.Color(222, 222, 121));
-        jLabel3.setText("Varan ligger i korgen!");
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(245, 245, 245));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Varan har lagts till i varukorgen!");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -133,7 +137,7 @@ public class ItemPanel extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,13 +160,17 @@ public class ItemPanel extends javax.swing.JPanel {
 
         denyDialog.setBackground(new java.awt.Color(255, 255, 153));
         denyDialog.setForeground(new java.awt.Color(255, 255, 153));
+        denyDialog.setMinimumSize(new java.awt.Dimension(175, 40));
         denyDialog.setUndecorated(true);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 153));
+        jPanel4.setBackground(new java.awt.Color(234, 67, 53));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel2.setBackground(new java.awt.Color(222, 222, 121));
-        jLabel2.setText("Kan inte lägga till 0 Varor!");
+        jLabel2.setBackground(new java.awt.Color(234, 67, 53));
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(245, 245, 245));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Kan inte lägga till 0st varor!");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

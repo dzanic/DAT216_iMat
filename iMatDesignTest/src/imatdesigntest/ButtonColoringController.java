@@ -58,14 +58,15 @@ public class ButtonColoringController {
     //outside of the controller, as this may destroy the logic flow.
     private void buttonReColorLogic(){
         Color c = new Color(52, 168, 83);                                        //Just the color we want to match against
+        Color d = new Color(244,156,11);
                                                  
         if(this.focusedButton1.getBackground().equals(c)){           
-            this.focusedButton1.setBackground(Color.green); 
+            this.focusedButton1.setBackground(d); 
         }
             
         buttonSwap();
         
-        if(this.focusedButton1.getBackground().equals(Color.green)){
+        if(this.focusedButton1.getBackground().equals(d)){
             this.focusedButton1.setBackground(c);
         }
     }
