@@ -29,6 +29,9 @@ public class spinnerPanel extends javax.swing.JPanel{
         quantityField = new javax.swing.JTextField();
         subButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(245, 245, 245));
+
+        addiButton.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         addiButton.setText("+");
         addiButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,9 +39,11 @@ public class spinnerPanel extends javax.swing.JPanel{
             }
         });
 
+        quantityField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         quantityField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        quantityField.setText("888");
+        quantityField.setText("8");
 
+        subButton.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         subButton.setText("-");
         subButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,7 +58,7 @@ public class spinnerPanel extends javax.swing.JPanel{
             .addGroup(layout.createSequentialGroup()
                 .addComponent(subButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(quantityField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(quantityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addiButton))
         );

@@ -31,6 +31,7 @@ public class ItemPanel extends javax.swing.JPanel {
         this.product = product;
         this.productNameLabel.setText(product.getName());
         this.productPriceLabel.setText(Double.toString(product.getPrice()));
+        this.jLabel4.setText(product.getUnit());
        
         this.productImageLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(product, 235,115));
         checkIfFavorite();
@@ -61,21 +62,20 @@ public class ItemPanel extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         productNameLabel = new javax.swing.JLabel();
-        favoriteAddButton = new javax.swing.JButton();
         infoButton = new javax.swing.JButton();
+        favoriteAddButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         addToCartButton = new javax.swing.JButton();
-        jSeparator3 = new javax.swing.JSeparator();
         productPriceLabel = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         spinnerPanel1 = new imatdesigntest.spinnerPanel();
         jPanel3 = new javax.swing.JPanel();
         productImageLabel = new javax.swing.JLabel();
 
+        informationDialog.setBackground(new java.awt.Color(245, 245, 245));
+        informationDialog.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        informationDialog.setForeground(new java.awt.Color(33, 33, 33));
         informationDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
         informationDialog.setType(java.awt.Window.Type.UTILITY);
         informationDialog.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -84,6 +84,10 @@ public class ItemPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Extra info table");
         jLabel1.setText("<html>Lorem ipsum dolor sit amet, c"
             + "onsecttur adipiscing elit, sed do eiusmod t"
@@ -191,20 +195,14 @@ public class ItemPanel extends javax.swing.JPanel {
         );
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(33, 33, 33)));
+        setBorder(new javax.swing.border.LineBorder(new java.awt.Color(33, 33, 33), 1, true));
 
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
+        productNameLabel.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        productNameLabel.setForeground(new java.awt.Color(33, 33, 33));
+        productNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productNameLabel.setText("Varunamn");
-
-        favoriteAddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/star.gif"))); // NOI18N
-        favoriteAddButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                favoriteAddButtonActionPerformed(evt);
-            }
-        });
 
         infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/info.gif"))); // NOI18N
         infoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -213,32 +211,42 @@ public class ItemPanel extends javax.swing.JPanel {
             }
         });
 
+        favoriteAddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/star.gif"))); // NOI18N
+        favoriteAddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                favoriteAddButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addComponent(productNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(productNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(infoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(favoriteAddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(infoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(productNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(favoriteAddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(infoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jSeparator2)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(productNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(favoriteAddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
+        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
+
         addToCartButton.setBackground(new java.awt.Color(52, 168, 83));
+        addToCartButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         addToCartButton.setForeground(new java.awt.Color(245, 245, 245));
         addToCartButton.setText("Lägg till");
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
@@ -247,13 +255,13 @@ public class ItemPanel extends javax.swing.JPanel {
             }
         });
 
-        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
+        productPriceLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        productPriceLabel.setForeground(new java.awt.Color(234, 67, 53));
         productPriceLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         productPriceLabel.setText("pris");
 
-        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
+        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("kr/st");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -263,16 +271,13 @@ public class ItemPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(spinnerPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(productPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(productPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addToCartButton))
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(addToCartButton)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,12 +285,11 @@ public class ItemPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(spinnerPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(productPriceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(spinnerPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -297,26 +301,20 @@ public class ItemPanel extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(productImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(productImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(productImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(productImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,7 +342,7 @@ public class ItemPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_addToCartButtonActionPerformed
 
     private void favoriteAddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favoriteAddButtonActionPerformed
-        if (favoriteAddButton.getBackground() == Color.blue){
+        if (favoriteAddButton.getBackground() == Color.ORANGE){
             
             IMatDataHandler.getInstance().removeFavorite(product);
             favoriteAddButton.setBackground(Color.lightGray);
@@ -358,13 +356,13 @@ public class ItemPanel extends javax.swing.JPanel {
            
         } else {
             IMatDataHandler.getInstance().addFavorite(product);
-            favoriteAddButton.setBackground(Color.blue);
+            favoriteAddButton.setBackground(Color.ORANGE);
         }
     }//GEN-LAST:event_favoriteAddButtonActionPerformed
 
     private void infoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoButtonActionPerformed
         informationDialog.setLocationRelativeTo(infoButton);
-        informationDialog.setSize(this.getSize());    
+        informationDialog.setSize(this.getSize());
         informationDialog.setVisible(true);
         
     }//GEN-LAST:event_infoButtonActionPerformed
@@ -376,7 +374,7 @@ public class ItemPanel extends javax.swing.JPanel {
     private void checkIfFavorite(){
        for (Product p : IMatDataHandler.getInstance().favorites()){
            if (p.equals(product)) {
-               favoriteAddButton.setBackground(Color.blue);
+               favoriteAddButton.setBackground(Color.ORANGE);
                this.favoriteAddButton.repaint();
            }
        }
@@ -431,10 +429,6 @@ public class ItemPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel productImageLabel;
     private javax.swing.JLabel productNameLabel;
     private javax.swing.JLabel productPriceLabel;

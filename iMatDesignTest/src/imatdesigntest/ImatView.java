@@ -446,7 +446,7 @@ public class ImatView extends javax.swing.JFrame {
 
         shopViewPanel.setBackground(new java.awt.Color(225, 225, 225));
 
-        bannerPanel.setBackground(new java.awt.Color(205, 205, 205));
+        bannerPanel.setBackground(new java.awt.Color(215, 215, 215));
 
         searchTextField.setBackground(new java.awt.Color(245, 245, 245));
         searchTextField.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -766,7 +766,7 @@ public class ImatView extends javax.swing.JFrame {
         jScrollPane1.setBorder(null);
 
         oProductPanel.setBackground(new java.awt.Color(245, 245, 245));
-        oProductPanel.setLayout(new java.awt.GridLayout(0, 4, 2, 2));
+        oProductPanel.setLayout(new java.awt.GridLayout(0, 3, 10, 10));
         jScrollPane1.setViewportView(oProductPanel);
 
         javax.swing.GroupLayout productPanelLayout = new javax.swing.GroupLayout(productPanel);
