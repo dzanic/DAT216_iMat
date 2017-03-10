@@ -58,9 +58,9 @@ public class BasketItem extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         bskItmRmvBut = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(250, 250, 250));
 
-        jPanel3.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel3.setBackground(new java.awt.Color(250, 250, 250));
 
         bskItmNamLab.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         bskItmNamLab.setForeground(new java.awt.Color(33, 33, 33));
@@ -83,7 +83,7 @@ public class BasketItem extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel2.setBackground(new java.awt.Color(250, 250, 250));
 
         quantityField.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         quantityField.setForeground(new java.awt.Color(33, 33, 33));
@@ -137,7 +137,7 @@ public class BasketItem extends javax.swing.JPanel {
                 .addGap(19, 19, 19))
         );
 
-        jPanel4.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel4.setBackground(new java.awt.Color(250, 250, 250));
 
         bskOneItmPrice.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         bskOneItmPrice.setForeground(new java.awt.Color(33, 33, 33));
@@ -160,7 +160,7 @@ public class BasketItem extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel5.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel5.setBackground(new java.awt.Color(250, 250, 250));
 
         bskItmPrice.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         bskItmPrice.setForeground(new java.awt.Color(33, 33, 33));
@@ -183,7 +183,7 @@ public class BasketItem extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel6.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel6.setBackground(new java.awt.Color(250, 250, 250));
 
         bskItmRmvBut.setBackground(new java.awt.Color(33, 33, 33));
         bskItmRmvBut.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N

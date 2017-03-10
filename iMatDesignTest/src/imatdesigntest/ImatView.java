@@ -122,6 +122,8 @@ public class ImatView extends javax.swing.JFrame {
         prevOrderTable = new javax.swing.JTable();
         totalPriceLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
         myInfoPanel = new javax.swing.JPanel();
         infoFstNameLabel = new javax.swing.JLabel();
         infoMailLabel = new javax.swing.JLabel();
@@ -175,6 +177,7 @@ public class ImatView extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         basketContShopBut = new javax.swing.JButton();
         basketCheckOutBut = new javax.swing.JButton();
+        jLabel49 = new javax.swing.JLabel();
         checkOutPanel = new javax.swing.JPanel();
         chkOutBskPanel = new javax.swing.JPanel();
         seqPanel1 = new javax.swing.JPanel();
@@ -196,6 +199,7 @@ public class ImatView extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         basketContShopBut1 = new javax.swing.JButton();
         chkOutBskNxtBut = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
         chkOutAdrPanel = new javax.swing.JPanel();
         seqPanel2 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
@@ -318,7 +322,7 @@ public class ImatView extends javax.swing.JFrame {
 
         jLabel46.setBackground(new java.awt.Color(52, 168, 83));
         jLabel46.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(245, 245, 245));
+        jLabel46.setForeground(new java.awt.Color(51, 51, 51));
         jLabel46.setText("Dina uppgifter har sparats!");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -494,7 +498,10 @@ public class ImatView extends javax.swing.JFrame {
         basketButton.setBackground(new java.awt.Color(66, 133, 244));
         basketButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         basketButton.setForeground(new java.awt.Color(245, 245, 245));
-        basketButton.setText("Varukorg");
+        basketButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatdesigntest/our_images/basket.png"))); // NOI18N
+        basketButton.setMaximumSize(new java.awt.Dimension(100, 43));
+        basketButton.setMinimumSize(new java.awt.Dimension(100, 43));
+        basketButton.setPreferredSize(new java.awt.Dimension(100, 43));
         basketButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 basketButtonActionPerformed(evt);
@@ -539,10 +546,10 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(searchTextField)
                     .addGroup(bannerPanelLayout.createSequentialGroup()
                         .addGroup(bannerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(basketButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(mainEscapeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(profileButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(profileButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(basketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bannerPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -774,7 +781,7 @@ public class ImatView extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane1.setBorder(null);
 
-        oProductPanel.setBackground(new java.awt.Color(245, 245, 245));
+        oProductPanel.setBackground(new java.awt.Color(250, 250, 250));
         oProductPanel.setLayout(new java.awt.GridLayout(0, 3, 10, 10));
         jScrollPane1.setViewportView(oProductPanel);
 
@@ -835,8 +842,8 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(profileNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(profileLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(myInfoButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(prevOrderButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                    .addComponent(prevOrderButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                    .addComponent(myInfoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         profileNavPanelLayout.setVerticalGroup(
@@ -863,7 +870,7 @@ public class ImatView extends javax.swing.JFrame {
         prevOrderPanel.setLayout(new java.awt.GridLayout(10, 0));
         profileScPanel.add(prevOrderPanel, "card3");
 
-        prevOrderViewPanel.setBackground(new java.awt.Color(245, 245, 245));
+        prevOrderViewPanel.setBackground(new java.awt.Color(250, 250, 250));
 
         dateLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(33, 33, 33));
@@ -895,57 +902,74 @@ public class ImatView extends javax.swing.JFrame {
         jScrollPane5.setViewportView(prevOrderTable);
 
         totalPriceLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        totalPriceLabel.setForeground(new java.awt.Color(33, 33, 33));
+        totalPriceLabel.setForeground(new java.awt.Color(250, 250, 250));
         totalPriceLabel.setText("jLabel5");
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel6.setForeground(new java.awt.Color(250, 250, 250));
         jLabel6.setText("Totalt Pris:");
+
+        jLabel47.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel47.setText("Odernr:");
+
+        jLabel48.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel48.setText("Datum/Tid:");
 
         javax.swing.GroupLayout prevOrderViewPanelLayout = new javax.swing.GroupLayout(prevOrderViewPanel);
         prevOrderViewPanel.setLayout(prevOrderViewPanelLayout);
         prevOrderViewPanelLayout.setHorizontalGroup(
             prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(prevOrderViewPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, prevOrderViewPanelLayout.createSequentialGroup()
-                        .addGap(652, 652, 652)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 888, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(prevOrderViewPanelLayout.createSequentialGroup()
+                .addGap(654, 654, 654)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(211, Short.MAX_VALUE))
+            .addGroup(prevOrderViewPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 739, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(prevOrderViewPanelLayout.createSequentialGroup()
+                        .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(69, 69, 69)
+                            .addComponent(jLabel47))
+                        .addGap(28, 28, 28)
+                        .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel48)
                             .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(727, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         prevOrderViewPanelLayout.setVerticalGroup(
             prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(prevOrderViewPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(24, 24, 24)
                 .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel47)
+                    .addComponent(jLabel48))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateLabel)
+                    .addComponent(nrLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(prevOrderViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totalPriceLabel))
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         profileScPanel.add(prevOrderViewPanel, "card4");
 
-        myInfoPanel.setBackground(new java.awt.Color(245, 245, 245));
+        myInfoPanel.setBackground(new java.awt.Color(250, 250, 250));
         myInfoPanel.setMaximumSize(new java.awt.Dimension(600, 600));
         myInfoPanel.setPreferredSize(new java.awt.Dimension(600, 600));
 
         infoFstNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoFstNameLabel.setForeground(new java.awt.Color(33, 33, 33));
+        infoFstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         infoFstNameLabel.setText("Förnamn:");
 
         infoMailLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
@@ -1063,6 +1087,7 @@ public class ImatView extends javax.swing.JFrame {
 
         infoLstNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         infoLstNameLabel.setForeground(new java.awt.Color(33, 33, 33));
+        infoLstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         infoLstNameLabel.setText("Efternamn:");
 
         javax.swing.GroupLayout myInfoPanelLayout = new javax.swing.GroupLayout(myInfoPanel);
@@ -1070,67 +1095,69 @@ public class ImatView extends javax.swing.JFrame {
         myInfoPanelLayout.setHorizontalGroup(
             myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(myInfoPanelLayout.createSequentialGroup()
-                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(infoLstNameLabel)
-                    .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(myInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel45))
+                    .addGroup(myInfoPanelLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
                         .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(myInfoPanelLayout.createSequentialGroup()
-                                        .addGap(336, 336, 336)
-                                        .addComponent(infoMailLabel))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myInfoPanelLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(infoPhoneLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(infoAdrLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(infoZipLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(infoCityLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
-                                .addComponent(infoCrdTypeL, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(infoCardNumL, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(infoCardOwnL, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myInfoPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(infoCardValidL, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoContShopBut, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoFstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel45)
-                    .addComponent(infoZipField, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(infoCardCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(myInfoPanelLayout.createSequentialGroup()
-                        .addComponent(infoMonthCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(infoSlashLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(infoYearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(infoSaveBut)
-                    .addComponent(infoFstNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                    .addComponent(infoMailField)
-                    .addComponent(infoPhoneField)
-                    .addComponent(infoAdrField)
-                    .addComponent(infoCityField)
-                    .addComponent(infoCrdNumField)
-                    .addComponent(infoCrdOwnField)
-                    .addComponent(infoLstNameField))
-                .addContainerGap(1072, Short.MAX_VALUE))
+                                    .addComponent(infoContShopBut, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoMailLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoAdrLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoZipLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoCityLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoCrdTypeL, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoCardNumL, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoCardOwnL, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(infoPhoneLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addComponent(infoCardValidL, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(infoLstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(infoFstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(myInfoPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(infoSaveBut)
+                                        .addGroup(myInfoPanelLayout.createSequentialGroup()
+                                            .addComponent(infoMonthCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(infoSlashLabel)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(infoYearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(infoMailField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(infoPhoneField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(infoAdrField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(infoCityField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(infoCrdNumField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(infoCrdOwnField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(infoZipField, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(infoCardCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(myInfoPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(infoLstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myInfoPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(infoFstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(758, Short.MAX_VALUE))
         );
         myInfoPanelLayout.setVerticalGroup(
             myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(myInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel45)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoFstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(infoFstNameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(infoLstNameLabel)
-                    .addComponent(infoLstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
+                .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(infoLstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(infoLstNameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoMailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(infoMailLabel))
@@ -1172,7 +1199,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(myInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoSaveBut)
                     .addComponent(infoContShopBut))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
 
         profileScPanel.add(myInfoPanel, "card2");
@@ -1186,7 +1213,8 @@ public class ImatView extends javax.swing.JFrame {
             .addGroup(profilePanelLayout.createSequentialGroup()
                 .addComponent(profileNavPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1631, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(507, Short.MAX_VALUE))
         );
         profilePanelLayout.setVerticalGroup(
             profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1198,8 +1226,7 @@ public class ImatView extends javax.swing.JFrame {
 
         helpPanel.setBackground(new java.awt.Color(245, 245, 245));
 
-        jPanel1.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBackground(new java.awt.Color(250, 250, 250));
         jPanel1.setForeground(new java.awt.Color(33, 33, 33));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -1232,15 +1259,19 @@ public class ImatView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(504, 504, 504)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel44)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel42)
-                    .addComponent(jLabel43)
-                    .addComponent(helpContShop))
-                .addContainerGap(1110, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel42)
+                            .addComponent(jLabel43)
+                            .addComponent(helpContShop))))
+                .addContainerGap(787, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1257,14 +1288,17 @@ public class ImatView extends javax.swing.JFrame {
                 .addComponent(jLabel44)
                 .addGap(18, 18, 18)
                 .addComponent(helpContShop)
-                .addContainerGap(531, Short.MAX_VALUE))
+                .addContainerGap(535, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout helpPanelLayout = new javax.swing.GroupLayout(helpPanel);
         helpPanel.setLayout(helpPanelLayout);
         helpPanelLayout.setHorizontalGroup(
             helpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, helpPanelLayout.createSequentialGroup()
+                .addContainerGap(519, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(121, 121, 121))
         );
         helpPanelLayout.setVerticalGroup(
             helpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1312,10 +1346,6 @@ public class ImatView extends javax.swing.JFrame {
         basketTopPanel.setLayout(basketTopPanelLayout);
         basketTopPanelLayout.setHorizontalGroup(
             basketTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(basketTopPanelLayout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketTopPanelLayout.createSequentialGroup()
                 .addContainerGap(565, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1328,13 +1358,17 @@ public class ImatView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(245, 245, 245))
+            .addGroup(basketTopPanelLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         basketTopPanelLayout.setVerticalGroup(
             basketTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketTopPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(basketTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel7)
@@ -1348,8 +1382,8 @@ public class ImatView extends javax.swing.JFrame {
         basketScrollPane.setBorder(null);
         basketScrollPane.setPreferredSize(new java.awt.Dimension(0, 400));
 
-        basketGridPanel.setBackground(new java.awt.Color(245, 245, 245));
-        basketGridPanel.setLayout(new java.awt.GridLayout(5, 0));
+        basketGridPanel.setBackground(new java.awt.Color(250, 250, 250));
+        basketGridPanel.setLayout(new java.awt.GridLayout(15, 0));
         basketScrollPane.setViewportView(basketGridPanel);
 
         basketBottomPanel.setBackground(new java.awt.Color(245, 245, 245));
@@ -1387,20 +1421,27 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        jLabel49.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel49.setText("kr");
+
         javax.swing.GroupLayout basketBottomPanelLayout = new javax.swing.GroupLayout(basketBottomPanel);
         basketBottomPanel.setLayout(basketBottomPanelLayout);
         basketBottomPanelLayout.setHorizontalGroup(
             basketBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketBottomPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(997, Short.MAX_VALUE)
                 .addGroup(basketBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(basketContShopBut)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(basketBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(basketTotPriceLab, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(basketCheckOutBut))
-                .addGap(158, 158, 158)
+                    .addComponent(basketCheckOutBut)
+                    .addGroup(basketBottomPanelLayout.createSequentialGroup()
+                        .addComponent(basketTotPriceLab)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel49)))
+                .addGap(227, 227, 227)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1411,7 +1452,8 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(basketBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(basketTotPriceLab)
-                    .addComponent(jLabel14))
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel49))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(basketBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(basketContShopBut)
@@ -1423,12 +1465,9 @@ public class ImatView extends javax.swing.JFrame {
         basketPanel2.setLayout(basketPanel2Layout);
         basketPanel2Layout.setHorizontalGroup(
             basketPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(basketTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(basketBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(basketScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         basketPanel2Layout.setVerticalGroup(
             basketPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1509,11 +1548,11 @@ public class ImatView extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel17.setText("Pris");
+        jLabel17.setText("     Pris");
 
         jLabel18.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel18.setText("á pris");
+        jLabel18.setText("         á pris");
 
         jLabel19.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1530,11 +1569,11 @@ public class ImatView extends javax.swing.JFrame {
         basketTopPanel1Layout.setHorizontalGroup(
             basketTopPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketTopPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(628, Short.MAX_VALUE)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1603,35 +1642,45 @@ public class ImatView extends javax.swing.JFrame {
             }
         });
 
+        jLabel50.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel50.setText("kr");
+
         javax.swing.GroupLayout basketBottomPanel1Layout = new javax.swing.GroupLayout(basketBottomPanel1);
         basketBottomPanel1.setLayout(basketBottomPanel1Layout);
         basketBottomPanel1Layout.setHorizontalGroup(
             basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketBottomPanel1Layout.createSequentialGroup()
-                .addContainerGap(1111, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkOutBskNxtBut, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketBottomPanel1Layout.createSequentialGroup()
+                        .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(chkOutBskNxtBut, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basketBottomPanel1Layout.createSequentialGroup()
                         .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(basketContShopBut1)
                             .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(basketTotPriceLab1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(basketTotPriceLab1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel50)
+                        .addGap(517, 517, 517))))
         );
         basketBottomPanel1Layout.setVerticalGroup(
             basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketBottomPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(basketBottomPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
                     .addComponent(basketTotPriceLab1)
-                    .addComponent(jLabel24))
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel50))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(basketContShopBut1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGap(4, 4, 4)
                 .addComponent(chkOutBskNxtBut)
                 .addContainerGap())
         );
@@ -1654,7 +1703,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(basketTopPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                .addComponent(basketScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(basketBottomPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1763,6 +1812,7 @@ public class ImatView extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, infoCityField, org.jdesktop.beansbinding.ELProperty.create("${text}"), infoCityField1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        saveAdrChkBox.setBackground(new java.awt.Color(250, 250, 250));
         saveAdrChkBox.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         saveAdrChkBox.setText("Spara uppgifter");
 
@@ -1771,7 +1821,7 @@ public class ImatView extends javax.swing.JFrame {
         seqAdrPanelLayout.setHorizontalGroup(
             seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqAdrPanelLayout.createSequentialGroup()
-                .addGap(383, 383, 383)
+                .addGap(300, 300, 300)
                 .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(infoPhoneLabel1)
                     .addComponent(infoNameLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1784,17 +1834,17 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(saveAdrChkBox)
                     .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(infoZipField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(infoCityField1)
+                        .addComponent(infoCityField1, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
                         .addComponent(infoAdrField1)
                         .addComponent(infoPhoneField1)
                         .addComponent(infoMailField1)
-                        .addComponent(infoNameField1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(infoNameField1)))
+                .addContainerGap(598, Short.MAX_VALUE))
         );
         seqAdrPanelLayout.setVerticalGroup(
             seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqAdrPanelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(73, 73, 73)
                 .addGroup(seqAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoNameLabel1)
                     .addComponent(infoNameField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1820,7 +1870,7 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoCityField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveAdrChkBox)
-                .addContainerGap(383, Short.MAX_VALUE))
+                .addContainerGap(368, Short.MAX_VALUE))
         );
 
         seqNavPanel2.setBackground(new java.awt.Color(245, 245, 245));
@@ -1870,12 +1920,12 @@ public class ImatView extends javax.swing.JFrame {
         chkOutAdrPanel.setLayout(chkOutAdrPanelLayout);
         chkOutAdrPanelLayout.setHorizontalGroup(
             chkOutAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chkOutAdrPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(seqAdrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(seqPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(seqNavPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chkOutAdrPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(seqAdrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128))
         );
         chkOutAdrPanelLayout.setVerticalGroup(
             chkOutAdrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1968,7 +2018,7 @@ public class ImatView extends javax.swing.JFrame {
         seqPayPanelLayout.setHorizontalGroup(
             seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPayPanelLayout.createSequentialGroup()
-                .addGap(641, 641, 641)
+                .addGap(657, 657, 657)
                 .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(seqPayPanelLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
@@ -1998,7 +2048,7 @@ public class ImatView extends javax.swing.JFrame {
         seqPayPanelLayout.setVerticalGroup(
             seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seqPayPanelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(97, 97, 97)
                 .addGroup(seqPayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(infoCrdTypeL1)
                     .addComponent(infoCardCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2021,7 +2071,7 @@ public class ImatView extends javax.swing.JFrame {
                     .addComponent(infoYearCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(saveCrdChkBox)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(377, Short.MAX_VALUE))
         );
 
         seqNavPanel3.setBackground(new java.awt.Color(245, 245, 245));
@@ -2107,7 +2157,7 @@ public class ImatView extends javax.swing.JFrame {
             seqPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seqPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 1737, Short.MAX_VALUE)
                 .addContainerGap())
         );
         seqPanel4Layout.setVerticalGroup(
@@ -2121,6 +2171,7 @@ public class ImatView extends javax.swing.JFrame {
         seqConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
 
         infoConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
+        infoConfirmPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         infoNameLabel2.setBackground(new java.awt.Color(245, 245, 245));
         infoNameLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
@@ -2242,7 +2293,7 @@ public class ImatView extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cvcField, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel39, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
-        jLabel40.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel40.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(33, 33, 33));
         jLabel40.setText("Dina uppgifter:");
 
@@ -2251,43 +2302,39 @@ public class ImatView extends javax.swing.JFrame {
         infoConfirmPanelLayout.setHorizontalGroup(
             infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infoConfirmPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel40)
+                    .addComponent(cvcConfirmLabel)
+                    .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(infoPhoneLabel2)
+                        .addComponent(infoCardOwnL2)
+                        .addComponent(infoNameLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoMailLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoAdrLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoZipLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoCityLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoCrdTypeL2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoCardNumL2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(infoCardValidL2, javax.swing.GroupLayout.Alignment.TRAILING)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(infoConfirmPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cvcConfirmLabel)
-                            .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(infoPhoneLabel2)
-                                .addComponent(infoCardOwnL2)
-                                .addComponent(infoNameLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoMailLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoAdrLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoZipLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoCityLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoCrdTypeL2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoCardNumL2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(infoCardValidL2, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addComponent(jLabel37)
+                        .addGap(3, 3, 3)
+                        .addComponent(infoSlashLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(infoConfirmPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel37)
-                                .addGap(3, 3, 3)
-                                .addComponent(infoSlashLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel38))
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel28)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31)
-                            .addComponent(jLabel32)
-                            .addComponent(jLabel33)
-                            .addComponent(jLabel34)
-                            .addComponent(jLabel35)
-                            .addComponent(jLabel36)
-                            .addComponent(jLabel39)))
-                    .addGroup(infoConfirmPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel40)))
+                        .addComponent(jLabel38))
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel35)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel39))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         infoConfirmPanelLayout.setVerticalGroup(
@@ -2341,12 +2388,13 @@ public class ImatView extends javax.swing.JFrame {
                 .addGroup(infoConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cvcConfirmLabel)
                     .addComponent(jLabel39))
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
 
         basketConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
+        basketConfirmPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel41.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         jLabel41.setText("Din varor:");
 
         jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
@@ -2354,7 +2402,8 @@ public class ImatView extends javax.swing.JFrame {
 
         finalBasketPanel.setBackground(new java.awt.Color(245, 245, 245));
         finalBasketPanel.setDoubleBuffered(false);
-        finalBasketPanel.setLayout(new java.awt.GridLayout(100, 0));
+        finalBasketPanel.setMaximumSize(new java.awt.Dimension(400, 400));
+        finalBasketPanel.setLayout(new java.awt.GridLayout(5, 0));
         jScrollPane3.setViewportView(finalBasketPanel);
 
         javax.swing.GroupLayout basketConfirmPanelLayout = new javax.swing.GroupLayout(basketConfirmPanel);
@@ -2362,12 +2411,12 @@ public class ImatView extends javax.swing.JFrame {
         basketConfirmPanelLayout.setHorizontalGroup(
             basketConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(basketConfirmPanelLayout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(jLabel41)
-                .addContainerGap(1237, Short.MAX_VALUE))
-            .addGroup(basketConfirmPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3))
+                .addGroup(basketConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(basketConfirmPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel41)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         basketConfirmPanelLayout.setVerticalGroup(
             basketConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2375,7 +2424,7 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel41)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout seqConfirmPanelLayout = new javax.swing.GroupLayout(seqConfirmPanel);
@@ -2924,7 +2973,11 @@ public class ImatView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
