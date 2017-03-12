@@ -2414,9 +2414,8 @@ public class ImatView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(basketConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(basketConfirmPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel41)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jLabel41))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         basketConfirmPanelLayout.setVerticalGroup(
             basketConfirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
