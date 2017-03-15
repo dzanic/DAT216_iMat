@@ -1242,8 +1242,8 @@
                                                       <Component id="nrLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane5" min="-2" pref="418" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane5" min="-2" pref="413" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel6" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="totalPriceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1286,7 +1286,7 @@
                                             <Component class="javax.swing.JTable" name="prevOrderTable">
                                               <Properties>
                                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                                  <Table columnCount="4" rowCount="4">
+                                                  <Table columnCount="4" rowCount="24">
                                                     <Column editable="true" title="Varunamn" type="java.lang.String"/>
                                                     <Column editable="true" title="Antal" type="java.lang.Double"/>
                                                     <Column editable="true" title="&#xe1; Pris" type="java.lang.Double"/>
@@ -1316,6 +1316,12 @@
                                                       <Renderer/>
                                                     </Column>
                                                   </TableColumnModel>
+                                                </Property>
+                                                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                                  <Dimension value="[2147483647, 385]"/>
+                                                </Property>
+                                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                                  <Dimension value="[300, 385]"/>
                                                 </Property>
                                                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                                                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>

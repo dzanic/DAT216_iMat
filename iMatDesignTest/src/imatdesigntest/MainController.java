@@ -84,6 +84,10 @@ public class MainController implements CardViewController, ItemPanelController,
     this.errorMessageLabel= errorMessageLabel;
     this.finalButton     = finalButton;
       
+//    IMatDataHandler.getInstance().getOrders().clear();
+//    IMatDataHandler.getInstance().reset();
+//    IMatDataHandler.getInstance().shutDown();
+    
     }
     
     public void populateView(ProductCategory prd){
@@ -474,16 +478,26 @@ public class MainController implements CardViewController, ItemPanelController,
         this.totalPriceLabel.setText("something");  //Need to do a forloop calculating everything because the total isnt supported by the backend.
         for(ShoppingItem shopItem : order.getItems()){
             
-               this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getName(), j, 0);
-               this.prevOrderTable.getModel().setValueAt(shopItem.getAmount(), j, 1);
-               this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getPrice(), j, 2);
-               this.prevOrderTable.getModel().setValueAt(shopItem.getTotal(), j, 3);
+            this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getName(), j, 0);
+            this.prevOrderTable.getModel().setValueAt(shopItem.getAmount(), j, 1);
+            this.prevOrderTable.getModel().setValueAt(shopItem.getProduct().getPrice(), j, 2);
+            this.prevOrderTable.getModel().setValueAt(shopItem.getTotal(), j, 3);
+               
+            j++;   
+        }
+        
+        while(j<23){
+            
+            this.prevOrderTable.getModel().setValueAt(null, j, 0);
+            this.prevOrderTable.getModel().setValueAt(null, j, 1);
+            this.prevOrderTable.getModel().setValueAt(null, j, 2);
+            this.prevOrderTable.getModel().setValueAt(null, j, 3);
             
             j++;
         }
-       
         
     }
+    
     @Override
     public void specCard(String name){
         this.cardLayout.show(contentPanel, name);
