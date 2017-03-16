@@ -73,7 +73,7 @@ public class ItemPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         productImageLabel = new javax.swing.JLabel();
 
-        informationDialog.setBackground(new java.awt.Color(245, 245, 245));
+        informationDialog.setBackground(new java.awt.Color(0, 255, 51));
         informationDialog.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         informationDialog.setForeground(new java.awt.Color(33, 33, 33));
         informationDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
@@ -84,7 +84,7 @@ public class ItemPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(245, 245, 245));
+        jLabel1.setBackground(new java.awt.Color(51, 255, 0));
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(33, 33, 33));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -372,6 +372,7 @@ public class ItemPanel extends javax.swing.JPanel {
         informationDialog.setLocationRelativeTo(infoButton);
         informationDialog.setSize(this.getSize());
         informationDialog.setVisible(true);
+        informationDialog.setBackground(Color.yellow);
         
     }//GEN-LAST:event_infoButtonActionPerformed
 

@@ -1877,6 +1877,9 @@
                                           <Events>
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoLstNameFieldActionPerformed"/>
                                           </Events>
+                                          <AuxValues>
+                                            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ImatView_infoLstNameField"/>
+                                          </AuxValues>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="infoLstNameLabel">
                                           <Properties>
