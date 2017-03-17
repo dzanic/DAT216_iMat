@@ -1399,12 +1399,8 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
@@ -1457,17 +1453,21 @@
                                                               </Group>
                                                           </Group>
                                                       </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                                                          <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
                                                   </Group>
-                                                  <EmptySpace pref="758" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="568" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                         <DimensionLayout dim="1">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                                   <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="infoFstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="infoFstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1545,6 +1545,18 @@
                                             </Property>
                                             <Property name="horizontalAlignment" type="int" value="4"/>
                                             <Property name="text" type="java.lang.String" value="F&#xf6;rnamn:"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="infoLstNameLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="SansSerif" size="12" style="0"/>
+                                            </Property>
+                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                              <Color blue="21" green="21" red="21" type="rgb"/>
+                                            </Property>
+                                            <Property name="horizontalAlignment" type="int" value="4"/>
+                                            <Property name="text" type="java.lang.String" value="Efternamn:"/>
                                           </Properties>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="infoMailLabel">
@@ -1658,6 +1670,22 @@
                                           <Events>
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoFstNameFieldActionPerformed"/>
                                           </Events>
+                                        </Component>
+                                        <Component class="javax.swing.JTextField" name="infoLstNameField">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="SansSerif" size="12" style="0"/>
+                                            </Property>
+                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                              <Color blue="21" green="21" red="21" type="rgb"/>
+                                            </Property>
+                                          </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoLstNameFieldActionPerformed"/>
+                                          </Events>
+                                          <AuxValues>
+                                            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ImatView_infoLstNameField"/>
+                                          </AuxValues>
                                         </Component>
                                         <Component class="javax.swing.JTextField" name="infoMailField">
                                           <Properties>
@@ -1863,34 +1891,6 @@
                                               <Color blue="21" green="21" red="21" type="rgb"/>
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="Uppgifter"/>
-                                          </Properties>
-                                        </Component>
-                                        <Component class="javax.swing.JTextField" name="infoLstNameField">
-                                          <Properties>
-                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                              <Font name="SansSerif" size="12" style="0"/>
-                                            </Property>
-                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                              <Color blue="21" green="21" red="21" type="rgb"/>
-                                            </Property>
-                                          </Properties>
-                                          <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="infoLstNameFieldActionPerformed"/>
-                                          </Events>
-                                          <AuxValues>
-                                            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ImatView_infoLstNameField"/>
-                                          </AuxValues>
-                                        </Component>
-                                        <Component class="javax.swing.JLabel" name="infoLstNameLabel">
-                                          <Properties>
-                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                              <Font name="SansSerif" size="12" style="0"/>
-                                            </Property>
-                                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                              <Color blue="21" green="21" red="21" type="rgb"/>
-                                            </Property>
-                                            <Property name="horizontalAlignment" type="int" value="4"/>
-                                            <Property name="text" type="java.lang.String" value="Efternamn:"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -2135,7 +2135,7 @@
                                               <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
                                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -2676,26 +2676,22 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="chkOutBskNxtBut" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel23" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel24" min="-2" pref="200" max="-2" attributes="0"/>
-                                                      </Group>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jLabel24" min="-2" pref="200" max="-2" attributes="0"/>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="basketTotPriceLab1" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="517" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace min="-2" pref="307" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel23" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="chkOutBskNxtBut" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2705,16 +2701,22 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="7" max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="basketTotPriceLab1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="3" attributes="0">
+                                                          <Component id="basketTotPriceLab1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                                      <Component id="chkOutBskNxtBut" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="basketContShopBut1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                              <Component id="chkOutBskNxtBut" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2884,18 +2886,22 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="infoPhoneLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="infoNameLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="infoMailLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="infoAdrLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="infoZipLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="infoCityLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="infoPhoneLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="infoNameLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="infoMailLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="infoAdrLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="infoZipLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="infoCityLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="infoLstNameLabel1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="saveAdrChkBox" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="infoLstNameField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="infoZipField1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                               <Component id="infoCityField1" alignment="0" pref="108" max="32767" attributes="0"/>
                                               <Component id="infoAdrField1" alignment="0" max="32767" attributes="0"/>
@@ -2904,7 +2910,7 @@
                                               <Component id="infoNameField1" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="598" max="32767" attributes="0"/>
+                                      <EmptySpace pref="559" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2916,7 +2922,12 @@
                                           <Component id="infoNameLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="infoNameField1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="infoLstNameLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="infoLstNameField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="infoMailLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="infoMailField1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2943,7 +2954,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="saveAdrChkBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="368" max="32767" attributes="0"/>
+                                      <EmptySpace pref="347" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2955,6 +2966,17 @@
                                   <Font name="SansSerif" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Namn:"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="infoLstNameLabel1">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="SansSerif" size="12" style="0"/>
+                                </Property>
+                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="21" green="21" red="21" type="rgb"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="Efternamn:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="infoMailLabel1">
@@ -3008,6 +3030,8 @@
                                   <BindingParameter name="javax.swing.binding.ParameterKeys.TEXT_CHANGE_STRATEGY" value="javax.swing.binding.TextChangeStrategy.ON_TYPE"/>
                                 </BindingProperty>
                               </BindingProperties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="infoLstNameField1">
                             </Component>
                             <Component class="javax.swing.JTextField" name="infoMailField1">
                               <Properties>
@@ -3674,6 +3698,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="infoLstNameLabel2" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                                               <Component id="cvcConfirmLabel" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
@@ -3709,7 +3734,7 @@
                                               <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="39" max="32767" attributes="0"/>
+                                          <EmptySpace pref="96" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -3723,7 +3748,9 @@
                                               <Component id="infoNameLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="infoLstNameLabel2" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="infoMailLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3775,7 +3802,7 @@
                                               <Component id="cvcConfirmLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="282" max="32767" attributes="0"/>
+                                          <EmptySpace pref="256" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -3790,6 +3817,17 @@
                                       <Font name="SansSerif" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Namn:"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="infoLstNameLabel2">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="SansSerif" size="12" style="0"/>
+                                    </Property>
+                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="21" green="21" red="21" type="rgb"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Efternamn:"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="infoMailLabel2">
@@ -4124,7 +4162,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="SansSerif" size="16" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Din varor:"/>
+                                    <Property name="text" type="java.lang.String" value="Dina varor:"/>
                                   </Properties>
                                 </Component>
                                 <Container class="javax.swing.JScrollPane" name="jScrollPane3">
