@@ -44,20 +44,38 @@ public class BasketItemFixed extends javax.swing.JPanel {
         basketFixedGeneralLabel = new javax.swing.JLabel();
         basketFixedPriceLabel = new javax.swing.JLabel();
 
-        jLabel1.setText("Varunamn");
+        setBackground(new java.awt.Color(250, 250, 250));
 
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel1.setText("Produkt:");
+
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(33, 33, 33));
         jLabel2.setText("Antal:");
 
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(33, 33, 33));
         jLabel3.setText("á pris:");
 
+        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(33, 33, 33));
         jLabel4.setText("Pris:");
 
+        basketFixedNameLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        basketFixedNameLabel.setForeground(new java.awt.Color(33, 33, 33));
         basketFixedNameLabel.setText("jLabel5");
 
+        basketFixedAmountLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        basketFixedAmountLabel.setForeground(new java.awt.Color(33, 33, 33));
         basketFixedAmountLabel.setText("jLabel6");
 
+        basketFixedGeneralLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        basketFixedGeneralLabel.setForeground(new java.awt.Color(33, 33, 33));
         basketFixedGeneralLabel.setText("jLabel7");
 
+        basketFixedPriceLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        basketFixedPriceLabel.setForeground(new java.awt.Color(33, 33, 33));
         basketFixedPriceLabel.setText("jLabel8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -65,37 +83,38 @@ public class BasketItemFixed extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketFixedNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(basketFixedNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketFixedAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(basketFixedAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketFixedGeneralLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(basketFixedGeneralLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(basketFixedPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(basketFixedPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
                     .addComponent(basketFixedNameLabel)
+                    .addComponent(jLabel2)
                     .addComponent(basketFixedAmountLabel)
+                    .addComponent(jLabel3)
                     .addComponent(basketFixedGeneralLabel)
+                    .addComponent(jLabel4)
                     .addComponent(basketFixedPriceLabel))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

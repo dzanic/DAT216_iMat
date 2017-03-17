@@ -2336,7 +2336,7 @@ public class ImatView extends javax.swing.JFrame {
 
         jLabel40.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(33, 33, 33));
-        jLabel40.setText("Dina uppgifter:");
+        jLabel40.setText("Dina uppgifter");
 
         javax.swing.GroupLayout infoConfirmPanelLayout = new javax.swing.GroupLayout(infoConfirmPanel);
         infoConfirmPanel.setLayout(infoConfirmPanelLayout);
@@ -2436,18 +2436,19 @@ public class ImatView extends javax.swing.JFrame {
         );
 
         basketConfirmPanel.setBackground(new java.awt.Color(245, 245, 245));
-        basketConfirmPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel41.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
-        jLabel41.setText("Dina varor:");
+        jLabel41.setText("Dina varor");
 
         jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane3.setBorder(null);
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setHorizontalScrollBar(null);
 
         finalBasketPanel.setBackground(new java.awt.Color(245, 245, 245));
         finalBasketPanel.setDoubleBuffered(false);
         finalBasketPanel.setMaximumSize(new java.awt.Dimension(400, 400));
-        finalBasketPanel.setLayout(new java.awt.GridLayout(5, 0));
+        finalBasketPanel.setLayout(new java.awt.GridLayout(0, 1));
         jScrollPane3.setViewportView(finalBasketPanel);
 
         javax.swing.GroupLayout basketConfirmPanelLayout = new javax.swing.GroupLayout(basketConfirmPanel);
