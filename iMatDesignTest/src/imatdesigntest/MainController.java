@@ -34,7 +34,7 @@ public class MainController implements CardViewController, ItemPanelController,
                                        OrderHistoryPanelController{
 
     public MainController(  JTextField infoFstName,
-                            JTextField infoLstName,
+//                            JTextField infoLstName,
                             JTextField infoMail,
                             JTextField infoPhone,
                             JTextField infoAdr,
@@ -59,7 +59,7 @@ public class MainController implements CardViewController, ItemPanelController,
                             JLabel errorMessageLabel,
                             JButton finalButton){
     this.infoFstName         = infoFstName;
-    this.infoLstName      = infoLstName;
+//    this.infoLstName      = infoLstName;
     this.infoMail         = infoMail;
     this.infoPhone        = infoPhone ;
     this.infoAdr          = infoAdr;
@@ -156,7 +156,7 @@ public class MainController implements CardViewController, ItemPanelController,
     }
     public void populateProfile(){
         this.infoFstName.setText(IMatDataHandler.getInstance().getCustomer().getFirstName()); 
-        this.infoLstName.setText(IMatDataHandler.getInstance().getCustomer().getLastName());           
+//        this.infoLstName.setText(IMatDataHandler.getInstance().getCustomer().getLastName());           
         this.infoMail.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
         this.infoPhone.setText(IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
         this.infoAdr.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
@@ -207,7 +207,7 @@ public class MainController implements CardViewController, ItemPanelController,
     }
     public void saveAdress(){     
         IMatDataHandler.getInstance().getCustomer().setFirstName(this.infoFstName.getText()); 
-        IMatDataHandler.getInstance().getCustomer().setLastName(this.infoLstName.getText()); 
+//        IMatDataHandler.getInstance().getCustomer().setLastName(this.infoLstName.getText()); 
         IMatDataHandler.getInstance().getCustomer().setEmail(this.infoMail.getText());
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber(this.infoPhone.getText());
         IMatDataHandler.getInstance().getCustomer().setPostAddress(this.infoCity.getText());
@@ -230,10 +230,11 @@ public class MainController implements CardViewController, ItemPanelController,
             generateMessage("Var god ifyll ditt förnamn!", this.infoFstName, Color.RED);            
             return false;
             
-        }else if (this.infoLstName.getText().isEmpty()){
-            generateMessage("Var god ifyll ditt efternamn!", this.infoLstName, Color.RED);            
-            return false;
         }
+//        else if (this.infoLstName.getText().isEmpty()){
+//            generateMessage("Var god ifyll ditt efternamn!", this.infoLstName, Color.RED);            
+//            return false;
+//        }
         else if (this.infoMail.getText().isEmpty()){
             generateMessage("Var god ifyll din email adress!", this.infoMail, Color.RED);
             return false;
@@ -353,7 +354,6 @@ public class MainController implements CardViewController, ItemPanelController,
     
     
     private JTextField infoFstName;
-    private JTextField infoLstName;
     private JTextField infoMail;
     private JTextField infoPhone;
     private JTextField infoAdr;
